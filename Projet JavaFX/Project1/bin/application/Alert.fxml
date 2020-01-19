@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane fx:controller="application.AlertController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="Oui" onAction="#OuiClick" layoutX="131.0" layoutY="246.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="97.0" text="Oui" />
+      <Label layoutX="18.0" layoutY="33.0" prefHeight="178.0" prefWidth="587.0" text="Le Compte N'existe pas voulez vous en créer un?" textFill="#d32020">
+         <font>
+            <Font name="Arial" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="Non" onAction="#NonClick" layoutX="312.0" layoutY="246.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="97.0" text="Non" />
+   </children>
+</Pane>

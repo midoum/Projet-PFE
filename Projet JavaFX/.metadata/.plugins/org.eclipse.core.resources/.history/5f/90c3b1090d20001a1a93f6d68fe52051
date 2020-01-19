@@ -1,0 +1,75 @@
+package application;
+
+import java.awt.Color;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+
+
+public class BonjourController implements Initializable{
+
+@FXML
+private Button Acceuil;
+@FXML
+private Button Settings;
+@FXML 
+private BorderPane Bp;
+
+@FXML
+protected void  Click(ActionEvent event) throws IOException{
+	FadeTransition f=new FadeTransition();
+	f.setDuration(Duration.millis(1000));
+	
+	Pane s=FXMLLoader.load(getClass().getResource("Chart.fxml"));
+	f.setNode(s);
+	f.setFromValue(0);
+	f.setToValue(1);
+	f.play();
+	 Bp.setCenter(s);
+	 Acceuil.setStyle("-fx-background-color: #c3c8c9;-fx-text-fill:white;-fx-border-color:black");	
+	 Settings.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
+	 
+	
+}
+@FXML
+protected void  Changersettings(ActionEvent e1) throws IOException{
+	Pane s2=FXMLLoader.load(getClass().getResource("Settings.fxml"));
+	FadeTransition f=new FadeTransition();
+	f.setDuration(Duration.millis(1000));
+	f.setNode(s2);
+	f.setFromValue(0);
+	f.setToValue(1);
+	f.play();
+	Bp.setCenter(s2);
+	 Acceuil.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
+	 Settings.setStyle("-fx-background-color: #c3c8c9;-fx-text-fill:white;-fx-border-color:black");
+	
+}
+@FXML
+protected void  Close(ActionEvent e2) throws IOException{
+	Stage stage=Home.getStage();
+	stage.close();
+	
+}
+@Override
+public void initialize(URL location, ResourceBundle resources) {
+	Scene s5=new Scene(FXMLLoader.load(getClass().getResource("Greeting.fxml")));
+Bp.setCenter(s5);
+	
+}
+}

@@ -1,0 +1,24 @@
+package application;
+
+import java.sql.*;
+import javax.swing.*;
+
+public class Connect {
+public Connect(){
+	Connection conn=null;
+	String url="jdbc:mysql://localhost/javafx?useUnicode=true"
+	+"&useuseJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false"
+	+"&serverTimezone=UTC";
+	String user="root";
+	String pass="0000";
+	try{
+		conn=(Connection) DriverManager.getConnection(url,user,pass);
+		if(conn!=null){
+			System.out.println("Connected");
+			
+		}
+	}catch(Exception e){
+	System.out.println(e);
+	}
+}
+}

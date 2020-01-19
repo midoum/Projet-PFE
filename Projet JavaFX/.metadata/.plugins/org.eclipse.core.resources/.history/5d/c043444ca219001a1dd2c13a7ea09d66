@@ -1,0 +1,29 @@
+package application;
+
+import javafx.stage.Stage;
+import javafx.application.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.*;
+import javafx.scene.Scene;
+
+public class Main extends Application{
+	//creation de lieu ou se passe la scene //
+	public void start (Stage stage)throws Exception{
+		//creation du piece de théatre//
+		 Parent p1=FXMLLoader.load(getClass().getResource("login.fxml"));
+		 //creation de scenne et mettre la piece dedant//
+		 Scene s1= new Scene(p1); 
+		 
+		 stage.setTitle("JavaProject"); 
+	     stage.sizeToScene(); 
+	     stage.show(); 
+	     stage.setScene(s1);
+	   
+	}
+//lancement de scnene//
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Application.launch(args);
+	}
+
+}

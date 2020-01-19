@@ -1,0 +1,115 @@
+package application;
+
+
+
+import java.io.IOException;
+import java.sql.*;
+
+import javafx.beans.value.ObservableValue;
+import javafx.concurrent.Task;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+
+public class HomeController {
+
+	  @FXML
+	    private Button connect;
+	  @FXML
+	    private Button inscrire;
+	  @FXML
+	    private Label lpseudo;
+	  @FXML
+	    private Label lpass;
+	  @FXML
+	    private Label p;
+	  @FXML
+	    private ProgressIndicator progressbar;
+	  @FXML
+	  	private TextField user;
+	  @FXML
+	  	private PasswordField pass;
+	  @FXML
+	  protected void  ButtonConnect(ActionEvent event) throws IOException {
+		  Task  copyWorker = null;
+		  Connection conn=null;
+		String url="jdbc:mysql://localhost/javafx?useUnicode=true"+
+		"&useJDBCCompliantTimezoneShift=true"+
+		"&useLegacyDatetimeCode=false&serverTimezone=UTC";
+		String u="root";
+		String m="0000";
+		
+		  Node node = (Node) event.getSource();
+		  Stage stage = (Stage) node.getScene().getWindow();
+		  
+		String req="select * from connect where pseudo='"+user.getText()+"' and mdp='"+pass.getText()+"'";
+		try {
+			conn=DriverManager.getConnection(url,u,m);
+			if(conn!=null){
+			System.out.println("Connected");
+			Statement st=conn.createStatement();
+			ResultSet rs=st.executeQuery(req);
+			if(user.getText().isEmpty()){
+				lpseudo.setText("Remplir votre pseudo");
+			} if(pass.getText().isEmpty()){
+				lpass.setText("Remplir votre mot de passe");
+			}
+			
+		
+			
+			else if(rs.next()){
+				
+				
+				
+				
+					  copyWorker = Progres();
+				        progressbar.progressProperty().unbind();
+				        progressbar.progressProperty().bind(copyWorker.progressProperty());
+				        new Thread(copyWorker).start();
+				
+				        copyWorker.setOnSucceeded(e -> {
+				        	Scene s2;
+							try {
+								s2 = new Scene(FXMLLoader.load(getClass().getResource("Bonjour.fxml")));
+								 stage.setScene(s2);
+								  stage.show();
+							} catch (Exception e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+							 
+				        });
+						 
+				
+				 
+			}
+			}
+		}catch (Exception e){
+			System.out.println(e);
+		}
+	  }
+	  public Task Progres() {
+		    return new Task() {
+		      @Override
+		      protected Object call() throws Exception {
+		        for (int i = 0; i < 10; i++) {
+		          Thread.sleep(400);
+		               
+		          updateProgress(i + 1, 20);
+		         
+		        }
+		        return true;
+		      }
+		    };
+		    }
+}

@@ -1,0 +1,15 @@
+package application;
+
+import java.sql.*;
+
+public class Connect {
+public Connect(){
+	Connection conn=null;
+	String url="jdbc:mysql://localhost/javafx";
+	String user="root";
+	String pass="0000";
+	try{
+		
+	}catch
+}
+}

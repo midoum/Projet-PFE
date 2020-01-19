@@ -1,0 +1,17 @@
+package application;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+
+public class SettingsController {
+@FXML
+private TextField user;
+@FXML
+private PasswordField newpass;
+@FXML
+private PasswordField oldpass;
+@FXML
+public void Valider() throws Exception{
+	
+}
+}

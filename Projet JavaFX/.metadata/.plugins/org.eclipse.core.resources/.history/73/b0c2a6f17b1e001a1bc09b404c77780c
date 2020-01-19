@@ -1,0 +1,33 @@
+package application;
+
+import java.io.IOException;
+
+import javafx.event.ActionEvent;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+
+import javafx.scene.control.Button;
+
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+
+
+
+public class BonjourController {
+
+@FXML
+private Button Acceuil;
+@FXML 
+private BorderPane Bp;
+
+@FXML
+protected void  Click(ActionEvent event) throws IOException{
+	 Pane s=FXMLLoader.load(getClass().getResource("Chart.fxml"));
+	 Bp.setCenter(s);
+	 System.out.println("Bonjour"+Home.getStage());
+
+	  
+
+}
+}

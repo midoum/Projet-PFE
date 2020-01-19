@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane fx:controller="application.BonjourController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox fx:id="Vb" onMouseEntered="#Hover" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Acceuil"  contentDisplay="CENTER" prefHeight="104.0" prefWidth="104.0" text="Acceuil" />
+            <Label prefHeight="117.0" prefWidth="103.0" text="Graphes" />
+            <Label prefHeight="119.0" prefWidth="107.0" text="Oscilloscope" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

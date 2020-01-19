@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane fx:controller="application.BonjourController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="722.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="195.0" prefHeight="450.0" prefWidth="530.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;" />
+      <Pane prefHeight="450.0" prefWidth="196.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="Acceuil" layoutX="12.0" layoutY="57.0" onMouseEntered="#Hover" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: gray;" text="Acceuil" />
+            <Label fx:id="Graphes" layoutX="12.0" layoutY="121.0"  prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: gray;" text="Graphes" />
+            <Label fx:id="Oscilloscopes" layoutX="12.0" layoutY="191.0"  prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: gray;" text="Oscilloscope" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+package application;
+
+import java.sql.*;
+import javax.swing.*;
+
+public class Connect {
+public Connect(){
+	Connection conn=null;
+	String url="jdbc:mysql://localhost/javafx";
+	String user="root";
+	String pass="0000";
+	try{
+		
+	}catch(Exception e){
+	JOptionPane.showInternalMessageDialog(this,e);
+	}
+}
+}

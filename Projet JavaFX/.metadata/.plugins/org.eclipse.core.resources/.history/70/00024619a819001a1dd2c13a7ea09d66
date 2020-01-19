@@ -1,0 +1,27 @@
+package application;
+
+import java.net.URL;
+import java.sql.Connection;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+
+public class ConnectControlleur implements Initializable  {
+@FXML 
+private Button connect;
+Connection conn=null;
+String url="jdbc:mysql://localhost/javafx?useUnicode=true"
++"&useuseJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false"
++"&serverTimezone=UTC";
+String user="root";
+String pass="0000";
+String req="Select * from javafx.connect where pseudo='ahmed' and mdp='0000'";
+public ConnectControlleur(){
+	
+}
+
+	
+	
+}

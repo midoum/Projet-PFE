@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="Bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BonjourController">
+   <top>
+      <Pane fx:id="Toppane" prefHeight="91.0" prefWidth="474.0" style="-fx-background-color: whit;" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Pane prefHeight="36.0" prefWidth="600.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <VBox prefHeight="336.0" prefWidth="100.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Hover" style="-fx-background-color: black;" text="Button" textFill="WHITE" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

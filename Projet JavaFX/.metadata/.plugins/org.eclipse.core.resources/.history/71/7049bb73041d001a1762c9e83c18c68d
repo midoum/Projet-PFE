@@ -1,0 +1,130 @@
+package application;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import javafx.concurrent.Task;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+public class InscriptionController {
+@FXML
+private TextField nom;
+@FXML
+private TextField prenom;
+@FXML
+private TextField pseudo;
+@FXML
+private PasswordField pass;
+@FXML
+private PasswordField passconf;
+@FXML
+private ProgressIndicator progressindicator;
+@FXML
+private Label prenomt;
+@FXML
+private Label nomt;
+@FXML
+private Label pseudot;
+@FXML
+private Label passt;
+@FXML
+private Label passconft;
+
+@FXML	
+	public void ValiderAction(ActionEvent e){
+	  Task<?>  Charge = null;
+	  Connection conn=null;
+	String url="jdbc:mysql://localhost/javafx?useUnicode=true"+
+	"&useJDBCCompliantTimezoneShift=true"+
+	"&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	String u="root";
+	String m="0000";
+	
+	  
+	String req="insert into connect (pseudo,mdp,nom,prenom)values('"+pseudo.getText()+"','"+pass.getText()+"','"+nom.getText()+"','"+prenom.getText()+"')";
+	try {
+		
+		conn=DriverManager.getConnection(url,u,m);
+		if(conn!=null){
+			if(nom.getText().isEmpty()){
+				nom.setStyle("-fx-border-color:red");
+				nomt.setText("Ce champ est obligatoire");
+			}else if(prenom.getText().isEmpty()){
+				prenom.setStyle("-fx-border-color:red");
+				prenomt.setText("Ce champ est obligatoire");
+			}else if(pseudo.getText().isEmpty()){
+				pseudo.setStyle("-fx-border-color:red");
+				pseudot.setText("Ce champ est obligatoire");
+			}else if (pass.getText().isEmpty()){
+				pass.setStyle("-fx-border-color:red");
+				passt.setText("Ce champ est obligatoire");
+			}else if (passconf.getText().isEmpty()){
+				passconft.setText("Ce champ est obligatoire");}
+			
+		}else{
+			System.out.println("Connected");
+		Statement st=conn.createStatement();
+		st.executeUpdate(req);
+		
+	
+		
+		
+			
+			  
+			progressindicator.setVisible(true);
+			
+				  Charge = Progres();
+			       progressindicator.progressProperty().unbind();
+			       progressindicator.progressProperty().bind(Charge.progressProperty());
+			        new Thread(Charge).start();
+			
+			        Charge.setOnSucceeded(f -> {
+			        	Parent r;
+			        	Scene s2;
+			        	Stage stage= Home.getStage();
+						try {
+							r= FXMLLoader.load(getClass().getResource("login.fxml"));
+							s2=new Scene(r);
+							
+							 stage.setScene(s2);
+							  stage.show();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						 
+			        });
+		}
+			
+		
+	}catch (Exception e1){
+		System.out.println(e1);
+	}
+  }
+  public Task<?> Progres() {
+	    return new Task<Object>() {
+	      @Override
+	      protected Object call() throws Exception {
+	        for (int i = 0; i < 10; i++) {
+	          Thread.sleep(200);
+	               
+	          updateProgress(i + 1, 10);
+	         
+	        }
+	        return true;
+	      }
+	    };
+	}
+}

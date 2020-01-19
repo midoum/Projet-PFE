@@ -1,0 +1,18 @@
+package application;
+
+import java.sql.*;
+import javax.swing.*;
+
+public class Connect {
+public Connect(){
+	Connection conn=null;
+	String url="jdbc:mysql://localhost/javafx";
+	String user="root";
+	String pass="0000";
+	try{
+		con=DriverManager.getConnection(url,user,pass);
+	}catch(Exception e){
+	System.out.println(e);
+	}
+}
+}
