@@ -48,22 +48,18 @@ private Label passconft;
 @FXML	
 	public void ValiderAction(ActionEvent e){
 	  Task<?>  Charge = null;
-	  Connection conn=null;
-	String url="jdbc:mysql://localhost/javafx?useUnicode=true"+
-	"&useJDBCCompliantTimezoneShift=true"+
-	"&useLegacyDatetimeCode=false&serverTimezone=UTC";
-	String u="root";
-	String m="0000";
+
 	
 	  
 	String req="insert into connect (pseudo,mdp,nom,prenom)values('"+pseudo.getText()+"','"+pass.getText()+"','"+nom.getText()+"','"+prenom.getText()+"')";
 	try {
 		
-		conn=DriverManager.getConnection(url,u,m);
-		if(conn!=null){
+		new Connect().connect(req);
+		
+		
 			if(nom.getText().isEmpty()){
 				nom.setStyle("-fx-border-color:red");
-				nomt.setText("Ce champ est obligatoire");
+				nomt.setText("Ce ch	amp est obligatoire");
 			}else if(prenom.getText().isEmpty()){
 				prenom.setStyle("-fx-border-color:red");
 				prenomt.setText("Ce champ est obligatoire");
@@ -83,9 +79,7 @@ private Label passconft;
 				passconft.setText("Le mot de passe doit être identique");
 				}else{
 					System.out.println("Connected");
-						Statement st=conn.createStatement();
-						st.executeUpdate(req);
-		
+						
 	
 		
 		
@@ -115,7 +109,7 @@ private Label passconft;
 						 
 			        });
 		}
-			}
+			
 		}catch (Exception e1){
 		System.out.println(e1);
 	}

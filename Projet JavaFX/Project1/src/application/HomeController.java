@@ -2,7 +2,7 @@ package application;
 
 
 
-import java.io.IOException; 
+import java.io.IOException;  
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -55,25 +55,18 @@ public class HomeController implements Initializable{
 	 
 	  protected void  ButtonConnect(ActionEvent event) throws IOException {
 		  Task<?>  Charge = null;
-		  Connection conn=null;
-		String url="jdbc:mysql://localhost/javafx?useUnicode=true"+
-		"&useJDBCCompliantTimezoneShift=true"+
-		"&useLegacyDatetimeCode=false&serverTimezone=UTC";
-		String u="root";
-		String m="0000";
+		 
 		
+	
 		  Node node = (Node) event.getSource();
 		
 		  Stage stage = (Stage) node.getScene().getWindow();
 		  
 		String req="select * from connect where pseudo='"+user.getText()+"'";
 		try {
-			
-			conn=DriverManager.getConnection(url,u,m);
-			if(conn!=null){
-			System.out.println("Connected");
-			Statement st=conn.createStatement();
-			ResultSet rs=st.executeQuery(req);
+		
+			new Connect().connect(req);
+			ResultSet rs =new Connect().getRs();
 			if(user.getText().isEmpty()){
 				lpseudo.setText("Remplir votre pseudo");
 				user.setStyle("-fx-border-color:red");
@@ -127,7 +120,7 @@ public class HomeController implements Initializable{
 					e1.printStackTrace();
 				}
 			}
-			}
+			
 		}catch (Exception e){
 			System.out.println(e);
 		}

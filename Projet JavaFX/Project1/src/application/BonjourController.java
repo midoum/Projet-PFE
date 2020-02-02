@@ -89,6 +89,8 @@ public void initialize(URL location, ResourceBundle resources) {
 	Pane s3 = null;
 	try {
 		s3 = FXMLLoader.load(getClass().getResource("Greeting.fxml"));
+	
+		Bp.setCenter(s3);
 	} catch (IOException e) {
 		
 		e.printStackTrace();

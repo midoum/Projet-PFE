@@ -1,0 +1,60 @@
+package application;
+
+import java.io.IOException; 
+import java.net.URL;
+import java.sql.ResultSet;
+
+import java.util.ResourceBundle;
+
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.ComboBox;
+
+
+public class ChartController  implements Initializable{
+	 
+	    @FXML
+	    private LineChart <Number, Number> chart;
+	    @FXML
+	    private ComboBox<String>date;
+	    @FXML
+	    private NumberAxis xAxis;
+	    @FXML
+	    private NumberAxis yAxis;
+	
+	  
+	    @FXML
+	    protected void   rechercher(ActionEvent e) throws IOException{
+	    
+	    }  
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		String req="select Distinct  date,y from connect inner join temp on connect.id=temp.id;";
+		ResultSet rs = null;
+		new Connect().connect(req);
+					try{
+						while(rs.next()){
+					
+						date.getItems().add(rs.getString("date"));
+			chart=new LineChart<>(xAxis, yAxis);
+				 XYChart.Series<Number,Number>  series = new XYChart.Series<Number,Number> ();
+				 series.getData().add(new XYChart.Data<Number, Number>(rs.getInt("y"),rs.getInt("y")));
+	chart.getData().add(series);
+		}
+					}
+	
+	catch(Exception e){
+						
+					}
+		
+
+	
+}}

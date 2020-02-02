@@ -1,0 +1,78 @@
+package application;
+
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.DateFormatSymbols;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import com.mysql.cj.protocol.Resultset;
+
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.ComboBox;
+import javafx.stage.Stage;
+
+public class ChartController  implements Initializable{
+	 
+	    @FXML
+	    private LineChart <Number, Number> chart;
+	    @FXML
+	    private ComboBox<String>date;
+	    @FXML
+	    private NumberAxis xAxis;
+	    @FXML
+	    private NumberAxis yAxis;
+	  
+	    @FXML
+	    protected void   rechercher(ActionEvent e) throws IOException{
+	    
+	    }  
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		
+			
+					while(rs.next()){
+						date.getItems().add(rs.getString("date"));
+			chart=new LineChart<>(xAxis, yAxis);
+				 XYChart.Series<Number,Number>  series = new XYChart.Series<Number,Number> ();
+				 series.getData().add(new XYChart.Data<Number, Number>(rs.getInt("y"),rs.getInt("y")));
+	chart.getData().add(series);
+		}}
+		}catch(Exception e){
+		}
+	}
+	public void connect(String req,Resultset rs){
+		 Connection conn=null;
+			String url="jdbc:mysql://localhost/javafx?useUnicode=true"+
+			"&useJDBCCompliantTimezoneShift=true"+
+			"&useLegacyDatetimeCode=false&serverTimezone=UTC";
+			String u="root";
+			String m="0000";
+			String req="select Distinct  date,y from connect inner join temp on connect.id=temp.id;";
+			
+			ResultSet rs;
+			try{
+				conn=DriverManager.getConnection(url,u,m);
+				if(conn!=null){
+				Statement	st=conn.createStatement();
+				rs= st.executeQuery(req);
+	}
+}

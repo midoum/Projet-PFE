@@ -1,0 +1,9 @@
+package application;
+
+import com.mysql.cj.protocol.Resultset;
+
+public class Connect {
+public void connect(String req,Resultset rs){
+	
+}
+}
