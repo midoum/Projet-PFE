@@ -1,6 +1,6 @@
 package application;
 
-import java.awt.Color;
+import java.awt.Color; 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

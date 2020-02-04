@@ -1,10 +1,13 @@
 package application;
 
-import java.io.BufferedReader;
-import java.io.Flushable;
+import java.awt.Desktop; 
+import java.io.BufferedReader; 
+
 import java.io.IOException;
-import java.io.InputStream;
+
 import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.io.PrintWriter;
@@ -16,15 +19,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.web.WebView;
+
 
 public class ControllController implements Initializable{
 	static SerialPort chosenPort;
 	int fe=0;
 @FXML
 ComboBox<String> portList;
-@FXML
-WebView web;
+
 @FXML
 private TextField f;
 @FXML
@@ -39,6 +41,7 @@ private Button down;
 private Button left;
 @FXML
 private Button right;
+
 
 @FXML
 protected void  RobotControll(ActionEvent e5) throws IOException{
@@ -126,8 +129,11 @@ protected void right(ActionEvent e9) throws IOException{
 }
 
 @FXML
-protected void  Stream(ActionEvent e10) throws IOException{
-	web.getEngine().load(f.getText());
+protected void  Stream(ActionEvent e10) throws IOException, URISyntaxException{
+
+	if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+	    Desktop.getDesktop().browse(new URI(f.getText()));
+	}
 
 }
 @Override
