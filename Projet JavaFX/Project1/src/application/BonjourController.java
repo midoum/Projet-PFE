@@ -96,6 +96,7 @@ public void initialize(URL location, ResourceBundle resources) {
 		e.printStackTrace();
 	}
 Bp.setCenter(s3);
+
 	
 }
 }

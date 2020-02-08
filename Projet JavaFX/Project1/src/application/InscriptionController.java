@@ -54,7 +54,7 @@ private Label passconft;
 	String req="insert into connect (pseudo,mdp,nom,prenom)values('"+pseudo.getText()+"','"+pass.getText()+"','"+nom.getText()+"','"+prenom.getText()+"')";
 	try {
 		
-		new Connect().connect(req);
+		new Connect().update(req);
 		
 		
 			if(nom.getText().isEmpty()){

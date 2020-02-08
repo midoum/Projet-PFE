@@ -23,13 +23,13 @@ public class LineChartSample  {
 	
 	static LineChart<Number,Number>lineChart;
 public  LineChartSample() throws SQLException { 
-	String req="select * from connect inner join temp on connect.id=temp.id  where date='"+Date+"'; ";
+	String req="select * from temp  where date='"+Date+"'; ";
 	new Connect().connect(req);
 	ResultSet rs =new Connect().getRs();
               
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
-        xAxis.setLabel("Number of Month");
+        xAxis.setLabel("Graphe ");
       //creer graphe
          lineChart = 
                 new LineChart<Number,Number>(xAxis,yAxis);
@@ -37,7 +37,7 @@ public  LineChartSample() throws SQLException {
         lineChart.setTitle("Stock Monitoring, 2010");
    
         XYChart.Series series = new XYChart.Series();
-        series.setName("My portfolio");
+        series.setName("Température");
         while(rs.next()){
         	int x=rs.getInt("id");
         	int yy=rs.getInt("y");
