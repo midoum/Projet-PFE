@@ -194,7 +194,7 @@
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_wpLh6iAGEeqXOeIjdF_xiA" containerData="7500" selectedElement="_wpLh6yAGEeqXOeIjdF_xiA">
               <children xsi:type="basic:PartSashContainer" xmi:id="_wpLh6yAGEeqXOeIjdF_xiA" containerData="7496" selectedElement="_3FsJsEsdEeqCI7xPnJpNUQ" horizontal="true">
-                <children xsi:type="basic:PartSashContainer" xmi:id="_3FsJsEsdEeqCI7xPnJpNUQ" containerData="5000" selectedElement="_wpLh7CAGEeqXOeIjdF_xiA">
+                <children xsi:type="basic:PartSashContainer" xmi:id="_3FsJsEsdEeqCI7xPnJpNUQ" containerData="5000" selectedElement="_wpLh9SAGEeqXOeIjdF_xiA">
                   <children xsi:type="advanced:Placeholder" xmi:id="_wpLh7CAGEeqXOeIjdF_xiA" elementId="org.eclipse.ui.editorss" containerData="7845" ref="_wpMI9CAGEeqXOeIjdF_xiA"/>
                   <children xsi:type="basic:PartStack" xmi:id="_wpLh9SAGEeqXOeIjdF_xiA" elementId="bottom" containerData="2155" selectedElement="_wpLh-iAGEeqXOeIjdF_xiA">
                     <tags>org.eclipse.e4.secondaryDataStack</tags>
@@ -576,7 +576,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wpMKsCAGEeqXOeIjdF_xiA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_joFSQFsHEeqL8chvkh0hSg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wpPOIiAGEeqXOeIjdF_xiA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Yr04sFsKEeqodL49KkSK7w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wpPOIiAGEeqXOeIjdF_xiA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wpMKviAGEeqXOeIjdF_xiA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -609,7 +609,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wpMwFyAGEeqXOeIjdF_xiA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_joN1IFsHEeqL8chvkh0hSg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_wpPNwyAGEeqXOeIjdF_xiA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Yr-CoFsKEeqodL49KkSK7w" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_wpPNwyAGEeqXOeIjdF_xiA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_wpMwIyAGEeqXOeIjdF_xiA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -3529,7 +3529,7 @@
   <addons xmi:id="_wpPPmCAGEeqXOeIjdF_xiA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_wpPPmSAGEeqXOeIjdF_xiA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
   <addons xmi:id="_wpPPmiAGEeqXOeIjdF_xiA" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
-  <addons xmi:id="_ilXRAVsHEeqL8chvkh0hSg" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <categories xmi:id="_wpPPmyAGEeqXOeIjdF_xiA" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_wpPPnCAGEeqXOeIjdF_xiA" elementId="org.tigris.subversion.subclipse.commandCategory" name="SVN" description="Actions that apply when working with SVN repositories"/>
   <categories xmi:id="_wpPPnSAGEeqXOeIjdF_xiA" elementId="org.eclipse.wb.core.actions.category" name="WindowBuilder Pro" description="WindowBuilder Pro actions"/>
