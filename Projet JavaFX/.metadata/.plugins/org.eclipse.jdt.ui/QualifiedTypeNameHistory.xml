@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javafx.fxml.FXML"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
 <fullyQualifiedTypeName name="javafx.fxml.Initializable"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
@@ -14,7 +13,6 @@
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="application.Home"/>
 <fullyQualifiedTypeName name="javafx.scene.chart.PieChart"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="com.fazecast.jSerialComm.SerialPort"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.Reader"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
+<fullyQualifiedTypeName name="javafx.scene.control.TextArea"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

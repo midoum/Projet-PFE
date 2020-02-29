@@ -60,6 +60,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_SCANNER, 0, 0);
 		if(chosenPort.openPort()) {
 			connectButton.setText("Disconnect");
+			connectimg.setImage(new Image("@../../application/icons/cross-mark-on-a-black-circle-background.png"));
 
 		
 			
@@ -71,7 +72,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 	} else {
 		chosenPort.closePort();	
 		connectButton.setText("Connect");
-
+		connectimg.setImage(new Image("@../../application/icons/correct-symbol.png"));
 		
 	}}
 	
