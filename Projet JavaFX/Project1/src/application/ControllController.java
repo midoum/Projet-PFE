@@ -10,6 +10,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import java.io.PrintWriter;
 import com.fazecast.jSerialComm.SerialPort;
 import javafx.event.ActionEvent;
@@ -18,7 +19,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 
 public class ControllController implements Initializable{
@@ -26,7 +30,8 @@ public class ControllController implements Initializable{
 	int fe=0;
 @FXML
 ComboBox<String> portList;
-
+@FXML
+private TextArea data;
 @FXML
 private TextField f;
 @FXML
@@ -41,6 +46,8 @@ private Button down;
 private Button left;
 @FXML
 private Button right;
+@FXML
+private ImageView connectimg;
 
 
 @FXML
@@ -53,7 +60,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_SCANNER, 0, 0);
 		if(chosenPort.openPort()) {
 			connectButton.setText("Disconnect");
-			System.out.println(connectButton.getText());
+
 		
 			
 		
@@ -62,42 +69,34 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 			
 		}
 	} else {
-		// disconnect from the serial port
 		chosenPort.closePort();	
-
 		connectButton.setText("Connect");
-	}
-	Thread thred2 = new Thread(){
-		@Override public void run() {
-			// wait after connecting, so the bootloader can finish
-			try {Thread.sleep(100); } catch(Exception e) {}
 
-			// enter an infinite loop that sends text to the arduino
-			
-			BufferedReader input = new BufferedReader(new InputStreamReader(chosenPort.getInputStream()));
-			
-			
-	         
-			try {
-				 fe =input.read();
-				input.close();
-				
-				
-				System.out.println(fe);
-				
-				
-} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-				try {Thread.sleep(100); } catch(Exception e) {
-						
-				}
-			}
 		
-	};
-	thred2.start();
-}
+	}}
+	
+	@FXML
+	protected void  GetData(ActionEvent e11) throws IOException{
+		Thread thread2 = new Thread(){
+			@Override public void run() {
+				Scanner scanner = new Scanner(chosenPort.getInputStream());
+			while(scanner.hasNextLine()) {
+				
+					try {
+						String line = scanner.nextLine();
+						data.setWrapText(true);
+
+						data.setText(line);
+						System.out.println(line);
+						
+					} catch(Exception e) {}}
+				
+				scanner.close();
+			}
+		};
+		thread2.start();
+	}
+
 @FXML
 protected void  up(ActionEvent e6) throws IOException{
 Thread a=new Thread(){

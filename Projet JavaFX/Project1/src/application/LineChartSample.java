@@ -37,13 +37,16 @@ public  LineChartSample() throws SQLException {
         lineChart.setTitle("Stock Monitoring, 2010");
    
         XYChart.Series series = new XYChart.Series();
+      
         series.setName("Température");
         while(rs.next()){
         	int x=rs.getInt("id");
         	int yy=rs.getInt("y");
         
         XYChart.Data<Number,Number>  data=new XYChart.Data(x,yy);
+        
         series.getData().add(data );
+
         }
         
     
@@ -51,7 +54,7 @@ public  LineChartSample() throws SQLException {
         
      //ajouter serie
         lineChart.getData().add(series);
-       
+        
    
  
    }

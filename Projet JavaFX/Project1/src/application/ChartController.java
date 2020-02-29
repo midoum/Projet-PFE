@@ -32,7 +32,7 @@ public class ChartController  implements Initializable{
 	    protected void   rechercher(ActionEvent e) throws SQLException {
 	    String 	SelDate =date.getSelectionModel().getSelectedItem();
 	    new LineChartSample().setDate(SelDate);
-	  LineChart L1=new LineChartSample().getP();
+	    LineChart<?, ?> L1=new LineChartSample().getP();
        p.getChildren().add(L1);
 	    	
 	    

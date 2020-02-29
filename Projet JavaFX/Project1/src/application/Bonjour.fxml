@@ -13,9 +13,9 @@
          <children>
             <Button layoutX="830.0" mnemonicParsing="false" onAction="#Close" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: transparent;">
                <graphic>
-                  <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="31.0" fitWidth="31.0">
                      <image>
-                        <Image url="@icons/close.png" />
+                        <Image url="@../../application/icons/power-button-off.png" />
                      </image>
                   </ImageView>
                </graphic>
