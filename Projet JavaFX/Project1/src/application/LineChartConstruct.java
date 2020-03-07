@@ -19,8 +19,8 @@ import javafx.scene.chart.LineChart;
  
  
 public class LineChartConstruct  {
-	static String Date;
-	 static String Donne;
+	static String Date="2020-03-07";
+	 static String Donne="distance";
 	 int yy;
 	static LineChart<Number,Number>lineChart;
 public  LineChartConstruct() throws SQLException { 
@@ -41,7 +41,7 @@ public  LineChartConstruct() throws SQLException {
       
        
         while(rs.next()){
-        	String Donne=new ChartController().getDonne();
+      
         	int x=rs.getInt("id");
         	switch(Donne) {
         	case "temperature":

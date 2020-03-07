@@ -65,9 +65,9 @@
       <Label layoutX="369.0" layoutY="56.0" text="Choisissez le Port (COM) du RoboT" />
       <Button fx:id="getData" layoutX="574.0" layoutY="321.0" mnemonicParsing="false" onAction="#GetData" text="Consulter" />
       <TextField fx:id="lumi" layoutX="554.0" layoutY="110.0" prefHeight="25.0" prefWidth="59.0" />
-      <TextField fx:id="temper" layoutX="554.0" layoutY="161.0" prefHeight="25.0" prefWidth="58.0" />
-      <TextField fx:id="humi" layoutX="554.0" layoutY="213.0" prefHeight="25.0" prefWidth="59.0" />
-      <TextField fx:id="distance" layoutX="554.0" layoutY="265.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="distance" layoutX="554.0" layoutY="161.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="temper" layoutX="554.0" layoutY="213.0" prefHeight="25.0" prefWidth="59.0" />
+      <TextField fx:id="humidii" layoutX="554.0" layoutY="265.0" prefHeight="25.0" prefWidth="58.0" />
       <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="491.0" layoutY="100.0">
          <image>
             <Image url="@../../application/icons/luminosity.png" />

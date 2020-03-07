@@ -39,7 +39,7 @@ public class ChartController  implements Initializable{
 	    new LineChartConstruct().setDate(SelDate);
 	  
 	  String Donne=valeurs.getSelectionModel().getSelectedItem();
-	 
+
 
 	   LineChart<?, ?> L1=new LineChartConstruct().getP();
 	 p.getChildren().add(L1);	    	
