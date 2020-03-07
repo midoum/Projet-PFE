@@ -58,6 +58,10 @@ private Button right;
 @FXML
 private ImageView connectimg;
 String [] mot;
+int lum;
+int tem;
+int dis;
+int hum;
 
 @FXML
 protected void  RobotControll(ActionEvent e5) throws IOException{
@@ -103,10 +107,13 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 						System.out.println(mot[2]);
 						System.out.println(mot[3]);
 						lumi.setText(mot[0]);
-						temper.setText(mot[1]);
-						humi.setText(mot[2]);
-						distance.setText(mot[3]);
-						
+						distance.setText(mot[1]);
+						temper.setText(mot[2]);
+						humi.setText(mot[3]);
+					 lum=Integer.parseInt(mot[0]);
+					 dis=Integer.parseInt(mot[1]);
+					 tem=Integer.parseInt(mot[2]);
+				hum=Integer.parseInt(mot[3]);
 						
 					} catch(Exception e) {}}
 				
@@ -120,7 +127,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		Date Date=new Date();
 		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
 		String Date1=format.format(Date);
- String req="insert into temp (date,luminosite,temperature,humidite,distance)values('"+Date1+"','"+mot[0]+"','"+mot[1]+"','"+mot[2]+"','"+mot[3]+"')";
+ String req="insert into temp (date,luminosite,temperature,humidite,distance)values('"+Date1+"','"+lum+"','"+tem+"','"+hum+"','"+dis+"')";
 new Connect().update(req);	
 	}
 @FXML

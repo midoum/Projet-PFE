@@ -19,8 +19,8 @@ import javafx.scene.chart.LineChart;
  
  
 public class LineChartConstruct  {
-	static String Date="2020-03-07";
-	 static String Donne="distance";
+	static String Date;
+	 static String Donne;
 	 int yy;
 	static LineChart<Number,Number>lineChart;
 public  LineChartConstruct() throws SQLException { 
@@ -38,27 +38,26 @@ public  LineChartConstruct() throws SQLException {
         lineChart.setTitle("");
    
         XYChart.Series series = new XYChart.Series();
-      
+
        
         while(rs.next()){
-      
-        	int x=rs.getInt("id");
-        	switch(Donne) {
+         	switch(Donne) {
         	case "temperature":
-        	 yy=rs.getInt("temperature");
-        	 series.setName("temperature");
-       
+        		 yy=rs.getInt("temperature");
+        		break;
         	case "humidite":
         		 yy=rs.getInt("humidite");
-        		 series.setName("humidite");
+        		break;
+        	case "luminosite":
+        	 yy=rs.getInt("luminosite");
+        		break;
         	case "distance":
         		 yy=rs.getInt("distance");
-        		 series.setName("distance");
-	
-        	case "luminosite":
-        		 yy=rs.getInt("luminosite");
-        		 series.setName("luminosite");
-	}
+        		break;
+        	}
+        	
+        	int x=rs.getInt("id");
+       
         
         XYChart.Data<Number,Number>  data=new XYChart.Data(x,yy);
         

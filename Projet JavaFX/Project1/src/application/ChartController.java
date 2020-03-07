@@ -35,12 +35,12 @@ public class ChartController  implements Initializable{
 	  
 	    @FXML
 	    protected void   rechercher(ActionEvent e) throws SQLException {
-	   String 	SelDate =date.getSelectionModel().getSelectedItem();
-	    new LineChartConstruct().setDate(SelDate);
+	    	new LineChartConstruct().setDonne(valeurs.getSelectionModel().getSelectedItem());
+
+	    		String 	SelDate =date.getSelectionModel().getSelectedItem();
+	    		new LineChartConstruct().setDate(SelDate);
 	  
-	  String Donne=valeurs.getSelectionModel().getSelectedItem();
-
-
+	  
 	   LineChart<?, ?> L1=new LineChartConstruct().getP();
 	 p.getChildren().add(L1);	    	
 	    
