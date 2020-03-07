@@ -3,25 +3,30 @@ package application;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.ComboBox;
-
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 
 
 public class ChartController  implements Initializable{
-	 
 	  
 	    @FXML
 	    private ComboBox<String>date;
+	    @FXML
+	    private ComboBox<String>valeurs;
+	   
 	  @FXML 
 	  private Pane p;
 
@@ -30,11 +35,14 @@ public class ChartController  implements Initializable{
 	  
 	    @FXML
 	    protected void   rechercher(ActionEvent e) throws SQLException {
-	    String 	SelDate =date.getSelectionModel().getSelectedItem();
-	    new LineChartSample().setDate(SelDate);
-	    LineChart<?, ?> L1=new LineChartSample().getP();
-       p.getChildren().add(L1);
-	    	
+	   String 	SelDate =date.getSelectionModel().getSelectedItem();
+	    new LineChartConstruct().setDate(SelDate);
+	  
+	  String Donne=valeurs.getSelectionModel().getSelectedItem();
+	 
+
+	   LineChart<?, ?> L1=new LineChartConstruct().getP();
+	 p.getChildren().add(L1);	    	
 	    
 	    }  
 	    @FXML
@@ -45,7 +53,8 @@ public class ChartController  implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		String req="select distinct date from connect inner join temp on connect.id=temp.id;";
+		
+		String req="select distinct date from temp";
 		
 		new Connect().connect(req);
 		 rs =new Connect().getRs();
@@ -57,7 +66,13 @@ public class ChartController  implements Initializable{
 						
 							
 }
+						valeurs.getItems().add("temperature");
+						valeurs.getItems().add("humidite");
+						valeurs.getItems().add("distance");
+						valeurs.getItems().add("luminosite");
+						
 					}
+					
 	
 	catch(Exception e){
 						
@@ -65,4 +80,6 @@ public class ChartController  implements Initializable{
 		
 
 	
-}}
+}
+
+}

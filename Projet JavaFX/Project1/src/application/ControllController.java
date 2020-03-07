@@ -9,6 +9,8 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.io.PrintWriter;
@@ -30,10 +32,17 @@ public class ControllController implements Initializable{
 	int fe=0;
 @FXML
 ComboBox<String> portList;
-@FXML
-private TextArea data;
+
 @FXML
 private TextField f;
+@FXML
+private TextField lumi;
+@FXML
+private TextField temper;
+@FXML
+private TextField humi;
+@FXML
+private TextField distance;
 @FXML
 private Label temp;
 @FXML
@@ -48,7 +57,7 @@ private Button left;
 private Button right;
 @FXML
 private ImageView connectimg;
-
+String [] mot;
 
 @FXML
 protected void  RobotControll(ActionEvent e5) throws IOException{
@@ -85,10 +94,19 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 				
 					try {
 						String line = scanner.nextLine();
-						data.setWrapText(true);
-
-						data.setText(line);
-						System.out.println(line);
+					
+				
+						mot=line.split("=",4);
+					
+						System.out.println(mot[0]);
+						System.out.println(mot[1]);
+						System.out.println(mot[2]);
+						System.out.println(mot[3]);
+						lumi.setText(mot[0]);
+						temper.setText(mot[1]);
+						humi.setText(mot[2]);
+						distance.setText(mot[3]);
+						
 						
 					} catch(Exception e) {}}
 				
@@ -97,7 +115,14 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		};
 		thread2.start();
 	}
-
+	@FXML
+	protected void Enregistrer(ActionEvent e12) throws IOException{
+		Date Date=new Date();
+		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+		String Date1=format.format(Date);
+ String req="insert into temp (date,luminosite,temperature,humidite,distance)values('"+Date1+"','"+mot[0]+"','"+mot[1]+"','"+mot[2]+"','"+mot[3]+"')";
+new Connect().update(req);	
+	}
 @FXML
 protected void  up(ActionEvent e6) throws IOException{
 Thread a=new Thread(){

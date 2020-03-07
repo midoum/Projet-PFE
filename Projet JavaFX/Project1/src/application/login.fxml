@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="502.0" style="-fx-background-color: #d3dbd4; -fx-border-color: #616662;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="502.0" style="-fx-background-color: #d1cdd1; -fx-border-color: #616662;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
    <children>
       <Button fx:id="connect" layoutX="141.0" layoutY="230.0" mnemonicParsing="false" onAction="#ButtonConnect" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: transparent;" textFill="WHITE">
          <graphic>
@@ -39,7 +39,7 @@
       <Label fx:id="lpass" layoutX="179.0" layoutY="189.0" textFill="#d70808" />
       <Label fx:id="p" layoutX="342.0" layoutY="300.0" />
       <ProgressIndicator fx:id="progressindicator" layoutX="435.0" layoutY="280.0" progress="0.0" />
-      <Pane layoutX="-3.0" layoutY="-3.0" prefHeight="34.0" prefWidth="505.0" style="-fx-background-color: #5c5c5c; -fx-border-color: black;">
+      <Pane layoutX="-3.0" layoutY="-3.0" prefHeight="34.0" prefWidth="505.0" style="-fx-background-color: #d1cdd1; -fx-border-color: black;">
          <children>
             <Button layoutX="456.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" prefHeight="33.0" prefWidth="1.0" style="-fx-background-color: transparent; -fx-background-radius: 50;">
                <graphic>

@@ -13,5 +13,6 @@
             <Pane fx:id="p" layoutY="8.0" prefHeight="388.0" prefWidth="510.0" />
          </children></Pane>
       <Button layoutX="556.0" layoutY="88.0" mnemonicParsing="false" onAction="#MontrerTable" text="Table" />
+      <ComboBox fx:id="valeurs" layoutX="384.0" layoutY="34.0" prefWidth="150.0" />
    </children>
 </Pane>

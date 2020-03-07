@@ -18,11 +18,12 @@ import javafx.scene.chart.LineChart;
 
  
  
-public class LineChartSample  {
+public class LineChartConstruct  {
 	static String Date;
-	
+	 static String Donne;
+	 int yy;
 	static LineChart<Number,Number>lineChart;
-public  LineChartSample() throws SQLException { 
+public  LineChartConstruct() throws SQLException { 
 	String req="select * from temp  where date='"+Date+"'; ";
 	new Connect().connect(req);
 	ResultSet rs =new Connect().getRs();
@@ -34,14 +35,30 @@ public  LineChartSample() throws SQLException {
          lineChart = 
                 new LineChart<Number,Number>(xAxis,yAxis);
         //remplir série de donné       
-        lineChart.setTitle("Stock Monitoring, 2010");
+        lineChart.setTitle("");
    
         XYChart.Series series = new XYChart.Series();
       
-        series.setName("Température");
+       
         while(rs.next()){
+        	String Donne=new ChartController().getDonne();
         	int x=rs.getInt("id");
-        	int yy=rs.getInt("y");
+        	switch(Donne) {
+        	case "temperature":
+        	 yy=rs.getInt("temperature");
+        	 series.setName("temperature");
+       
+        	case "humidite":
+        		 yy=rs.getInt("humidite");
+        		 series.setName("humidite");
+        	case "distance":
+        		 yy=rs.getInt("distance");
+        		 series.setName("distance");
+	
+        	case "luminosite":
+        		 yy=rs.getInt("luminosite");
+        		 series.setName("luminosite");
+	}
         
         XYChart.Data<Number,Number>  data=new XYChart.Data(x,yy);
         
@@ -62,6 +79,12 @@ public  LineChartSample() throws SQLException {
 this.Date=Date;
 
 }
+ public void setDonne(String Donne) {
+this.Donne=Donne;
+
+}
+
+
 public LineChart<Number, Number> getP(){
 	return lineChart;
 }
