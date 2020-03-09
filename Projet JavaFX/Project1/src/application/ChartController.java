@@ -1,6 +1,6 @@
 package application;
 
-import java.net.URL;
+import java.net.URL; 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -9,12 +9,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -42,7 +39,11 @@ public class ChartController  implements Initializable{
 	  
 	  
 	   LineChart<?, ?> L1=new LineChartConstruct().getP();
-	 p.getChildren().add(L1);	    	
+	Stage stage=new Stage();
+	Pane pe=new Pane(L1);
+	Scene s=new Scene(pe);
+	stage.setScene(s);
+	stage.show();
 	    
 	    }  
 	    @FXML

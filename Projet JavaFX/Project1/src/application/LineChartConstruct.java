@@ -3,6 +3,8 @@ package application;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.sun.media.jfxmedia.events.NewFrameEvent;
+
 import javafx.application.Application;
 
 import javafx.scene.Scene;
@@ -30,15 +32,15 @@ public  LineChartConstruct() throws SQLException {
               
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
-        xAxis.setLabel("Graphe ");
+    
       //creer graphe
          lineChart = 
                 new LineChart<Number,Number>(xAxis,yAxis);
-        //remplir série de donné       
-        lineChart.setTitle("");
+       int i=10;
+        
    
         XYChart.Series series = new XYChart.Series();
-
+series.setName("'"+Donne+"'");
        
         while(rs.next()){
          	switch(Donne) {
@@ -56,20 +58,25 @@ public  LineChartConstruct() throws SQLException {
         		break;
         	}
         	
-        	int x=rs.getInt("id");
+        
        
+        	int x=i++;
+        	  XYChart.Data<Number,Number>  data=new XYChart.Data(x,yy);
+        	        
+        	        series.getData().add(data );
+      
         
-        XYChart.Data<Number,Number>  data=new XYChart.Data(x,yy);
-        
-        series.getData().add(data );
+       
 
         }
-        
+
     
    
         
      //ajouter serie
+      
         lineChart.getData().add(series);
+    
         
    
  

@@ -1,6 +1,6 @@
 package application;
 
-import java.awt.Color; 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,9 +11,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
+
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
+
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -22,6 +23,7 @@ import javafx.util.Duration;
 
 
 public class BonjourController implements Initializable{
+
 
 @FXML
 private Button Acceuil;
@@ -43,7 +45,7 @@ protected void  Click(ActionEvent event) throws IOException{
 	f.setToValue(1);
 	f.play();
 	 Bp.setCenter(s);
-	 Acceuil.setStyle("-fx-background-color: #c3c8c9;-fx-text-fill:white;-fx-border-color:black");	
+	 Acceuil.setStyle("-fx-background-color: orange;-fx-text-fill:white;-fx-border-color:orange");	
 	 Settings.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
 	 ControllButton.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
 	
@@ -59,7 +61,7 @@ protected void  Changersettings(ActionEvent e1) throws IOException{
 	f.play();
 	Bp.setCenter(s2);
 	 Acceuil.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
-	 Settings.setStyle("-fx-background-color: #c3c8c9;-fx-text-fill:white;-fx-border-color:black");
+	 Settings.setStyle("-fx-background-color: orange;-fx-text-fill:white;-fx-border-color:orange");
 	 ControllButton.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
 }
 @FXML
@@ -74,7 +76,7 @@ protected void  Controll(ActionEvent e3) throws IOException{
 	Bp.setCenter(s0);
 	 Acceuil.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
 	 Settings.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
-	 ControllButton.setStyle("-fx-background-color: #c3c8c9;-fx-text-fill:white;-fx-border-color:black");
+	 ControllButton.setStyle("-fx-background-color: orange;-fx-text-fill:white;-fx-border-color:orange");
 	
 }
 @FXML
@@ -89,6 +91,7 @@ public void initialize(URL location, ResourceBundle resources) {
 	Pane s3 = null;
 	try {
 		s3 = FXMLLoader.load(getClass().getResource("Greeting.fxml"));
+	
 	
 		Bp.setCenter(s3);
 	} catch (IOException e) {

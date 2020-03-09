@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.io.Reader"/>
-<fullyQualifiedTypeName name="javafx.scene.web.WebView"/>
-<fullyQualifiedTypeName name="javafx.scene.chart.AreaChart"/>
-<fullyQualifiedTypeName name="javafx.scene.control.ComboBox"/>
-<fullyQualifiedTypeName name="javafx.scene.chart.NumberAxis"/>
-<fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
-<fullyQualifiedTypeName name="application.ChartController"/>
-<fullyQualifiedTypeName name="javafx.stage.Window"/>
 <fullyQualifiedTypeName name="application.BonjourController"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.Pane"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.teamdev.jxbrowser.view.swing.BrowserView"/>
 <fullyQualifiedTypeName name="javafx.application.Application"/>
@@ -59,5 +50,14 @@
 <fullyQualifiedTypeName name="javafx.scene.control.RadioButton"/>
 <fullyQualifiedTypeName name="javafx.scene.Group"/>
 <fullyQualifiedTypeName name="javafx.scene.control.ToggleGroup"/>
+<fullyQualifiedTypeName name="application.ChartController"/>
 <fullyQualifiedTypeName name="application.LineChartConstruct"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javafx.scene.chart.XYChart.Data"/>
+<fullyQualifiedTypeName name="com.sun.media.jfxmedia.events.NewFrameEvent"/>
+<fullyQualifiedTypeName name="javafx.scene.chart.XYChart"/>
+<fullyQualifiedTypeName name="javafx.scene.chart.XYChart.Series"/>
+<fullyQualifiedTypeName name="application.Home"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Label"/>
+<fullyQualifiedTypeName name="application.HomeController"/>
 </qualifiedTypeNameHistroy>
