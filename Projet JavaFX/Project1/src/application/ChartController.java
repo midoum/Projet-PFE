@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import javax.swing.WindowConstants;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,7 +34,18 @@ public class ChartController  implements Initializable{
 	  
 	    @FXML
 	    protected void   rechercher(ActionEvent e) throws SQLException {
-	    	new LineChartConstruct("new");
+	    	String Date=date.getSelectionModel().getSelectedItem();
+	    	String Donne=valeurs.getSelectionModel().getSelectedItem();
+	    	new LineChartConstruct().setDonne(Donne);
+	    	new LineChartConstruct().setDate(Date);
+	    	
+	    	
+	    	LineChartConstruct chart=new LineChartConstruct();
+	        chart.setAlwaysOnTop(true);
+	        chart.pack();
+	        chart.setSize(600, 400);
+	        
+	        chart.setVisible(true);
 	    
 	    }  
 	    @FXML

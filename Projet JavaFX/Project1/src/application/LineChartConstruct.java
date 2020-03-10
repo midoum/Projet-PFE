@@ -1,68 +1,93 @@
 package application;
+import java.awt.BorderLayout;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
-import javax.swing.WindowConstants;
+import javax.swing.JPanel;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.data.category.DefaultCategoryDataset;
 
-import javafx.scene.chart.LineChart;
+import org.jfree.data.xy.XYDataset;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+
  class LineChartConstruct extends JFrame {
 
   private static final long serialVersionUID = 1L;
+  static  String Donne;
+  static String Date;
+  ResultSet rs;
+ int x=1;
+  int y;
+  public LineChartConstruct() throws SQLException {
 
-  public LineChartConstruct(String title) {
-    super(title);
-    // Create dataset
-    DefaultCategoryDataset dataset = createDataset();
-    // Create chart
-    JFreeChart chart = ChartFactory.createLineChart(
-        "Site Traffic (WWW.BORAJI.COM)", // Chart title
-        "Date", // X-Axis Label
-        "Number of Visitor", // Y-Axis Label
-        dataset
-        );
+    String req="Select * from temp where date='"+Date+"';";
+    new Connect().connect(req);
+    rs=new Connect().getRs();
+ 
+    JPanel chartPanel = createChartPanel();
+    add(chartPanel, BorderLayout.CENTER);
 
-    ChartPanel panel = new ChartPanel(chart);
-    setContentPane(panel);
-  }
+    setSize(640, 480);
+ 
+    setLocationRelativeTo(null);
+}
 
-  private DefaultCategoryDataset createDataset() {
+private JPanel createChartPanel() throws SQLException {
+	  String chartTitle = "Graphe de "+Donne;
+	    String xAxisLabel = "" ;
+	    String yAxisLabel = "";
+	 
+	    XYDataset dataset = createDataset();
+	 
+	    JFreeChart chart = ChartFactory.createXYLineChart(chartTitle,
+	            xAxisLabel, yAxisLabel, dataset);
+	 
+	    return new ChartPanel(chart);
+}
 
-    String series1 = "Vistor";
-    String series2 = "Unique Visitor";
+private XYDataset createDataset() throws SQLException {
+	   XYSeriesCollection dataset = new XYSeriesCollection();
+	    XYSeries series1 = new XYSeries("");
+	    while(rs.next()) {
+	    	switch(Donne) {
+	    	case "temperature":
+	    		y=rs.getInt("temperature");
+	    		break;
+	    	case "humidite":
+	    		y=rs.getInt("humidite");
+	    		break;
+	    	case "distance":
+	    		y=rs.getInt("distance");
+	    		break;
+	    	case "luminosite":
+	    		y=rs.getInt("luminosite");
+	    		break;
+	    	}
+	    	 x=x+1;
+	    	series1.add(x,y);
+	    }
+	  
+	    
+	    
+	    dataset.addSeries(series1);
+	
+	 
+	    return dataset;
+}
+       
 
-    DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+           
+    
 
-    dataset.addValue(200, series1, "2016-12-19");
-    dataset.addValue(150, series1, "2016-12-20");
-    dataset.addValue(100, series1, "2016-12-21");
-    dataset.addValue(210, series1, "2016-12-22");
-    dataset.addValue(240, series1, "2016-12-23");
-    dataset.addValue(195, series1, "2016-12-24");
-    dataset.addValue(245, series1, "2016-12-25");
-
-    dataset.addValue(150, series2, "2016-12-19");
-    dataset.addValue(130, series2, "2016-12-20");
-    dataset.addValue(95, series2, "2016-12-21");
-    dataset.addValue(195, series2, "2016-12-22");
-    dataset.addValue(200, series2, "2016-12-23");
-    dataset.addValue(180, series2, "2016-12-24");
-    dataset.addValue(230, series2, "2016-12-25");
-
-    return dataset;
-  }
-
-  public static void main(String[] args) {
-    SwingUtilities.invokeLater(() -> {
-    	LineChartConstruct chart=new LineChartConstruct("nouveau chart");
-      chart.setAlwaysOnTop(true);
-      chart.pack();
-      chart.setSize(600, 400);
-      chart.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-      chart.setVisible(true);
-    });
-  }
+  public void setDonne(String Donne) {
+		this.Donne=Donne;
+	}
+  public void setDate(String Date) {
+		this.Date=Date;
+	}
+ 
 }
