@@ -14,6 +14,7 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
+
  class LineChartConstruct extends JFrame {
 
   private static final long serialVersionUID = 1L;

@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="socket-2.3.jar"/>
 	<classpathentry kind="lib" path="swtgraphics2d.jar"/>
 	<classpathentry kind="lib" path="mysql-connector-java-8.0.19.jar"/>
+	<classpathentry kind="lib" path="rs2xml.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

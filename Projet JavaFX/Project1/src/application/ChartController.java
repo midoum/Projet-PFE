@@ -6,8 +6,13 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import javax.swing.JTable;
+import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
+import com.mysql.cj.protocol.Resultset;
+
+import javafx.embed.swing.SwingNode;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,6 +21,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import net.proteanit.sql.DbUtils;
 
 
 
@@ -51,7 +57,24 @@ public class ChartController  implements Initializable{
 	    @FXML
 	    protected void   MontrerTable(ActionEvent e1) throws SQLException{
 	   
+	    	 final SwingNode swingNode = new SwingNode();
+	    	
+	         createSwingContent(swingNode);
+	         p.getChildren().add(swingNode);	   
 	    
+	    }
+	    private void createSwingContent(final SwingNode swingNode) {
+	        SwingUtilities.invokeLater(new Runnable() {
+	            @Override
+	            public void run() {
+	             	ResultSet rs = null;
+	    	    	String req="select * from temp";
+	    	    	new Connect().connect(req);
+	    	    	JTable t=new JTable();
+	    	    	 t.setModel(DbUtils.resultSetToTableModel(rs));
+	                swingNode.setContent(t);
+	            }
+	        });
 	    }
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
