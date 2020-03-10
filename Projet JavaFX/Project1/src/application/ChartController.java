@@ -32,18 +32,12 @@ public class ChartController  implements Initializable{
 	  
 	    @FXML
 	    protected void   rechercher(ActionEvent e) throws SQLException {
-	    	new LineChartConstruct().setDonne(valeurs.getSelectionModel().getSelectedItem());
+	    	new XYLineChartExample(null).setDonne(valeurs.getSelectionModel().getSelectedItem());
 
 	    		String 	SelDate =date.getSelectionModel().getSelectedItem();
-	    		new LineChartConstruct().setDate(SelDate);
+	    		new XYLineChartExample(null).setDate(SelDate);
 	  
-	  
-	   LineChart<?, ?> L1=new LineChartConstruct().getP();
-	Stage stage=new Stage();
-	Pane pe=new Pane(L1);
-	Scene s=new Scene(pe);
-	stage.setScene(s);
-	stage.show();
+	    		new XYLineChartExample(null);
 	    
 	    }  
 	    @FXML
@@ -71,6 +65,7 @@ public class ChartController  implements Initializable{
 						valeurs.getItems().add("humidite");
 						valeurs.getItems().add("distance");
 						valeurs.getItems().add("luminosite");
+						valeurs.setValue("temperature");
 						
 					}
 					

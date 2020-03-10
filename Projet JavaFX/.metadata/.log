@@ -6412,3 +6412,37 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 0 2020-03-10 08:59:15.319
+!MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
+
+!ENTRY org.eclipse.jdt.core 4 0 2020-03-10 08:59:15.674
+!MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
+
+!ENTRY org.eclipse.jdt.core 4 0 2020-03-10 08:59:15.966
+!MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
+
+!ENTRY org.eclipse.jdt.core 4 0 2020-03-10 08:59:16.299
+!MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
+
+!ENTRY org.eclipse.jdt.core 4 0 2020-03-10 09:02:17.869
+!MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
+
+!ENTRY org.eclipse.egit.core 4 0 2020-03-10 09:16:43.617
+!MESSAGE Pulling 1 repository
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2020-03-10 09:16:43.617
+!MESSAGE https://github.com/midoum/Projet-PFE.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/midoum/Projet-PFE.git: not authorized
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:255)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:296)
+	at org.eclipse.egit.core.op.PullOperation$PullJob.run(PullOperation.java:256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/midoum/Projet-PFE.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:571)
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:392)
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:138)
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:124)
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1293)
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:244)
+	... 3 more
