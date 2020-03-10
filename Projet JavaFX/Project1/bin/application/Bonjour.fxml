@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="Bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="882.0" style="-fx-background-color: #d1cdd1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BonjourController">
+<BorderPane fx:id="Bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="882.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BonjourController">
    <top>
-      <Pane prefHeight="44.0" prefWidth="624.0" style="-fx-background-color: #d1cdd1; -fx-border-color: #616662;" BorderPane.alignment="CENTER">
+      <Pane prefHeight="44.0" prefWidth="624.0" style="-fx-background-color: #E59866; -fx-border-color: #616662;" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="830.0" mnemonicParsing="false" onAction="#Close" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="31.0" fitWidth="31.0">
                      <image>
-                        <Image url="@../../application/icons/power-button-off.png" />
+                        <Image url="@../../application/icons/remove-symbol.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -23,10 +23,10 @@
          </children></Pane>
    </top>
    <bottom>
-      <Pane prefHeight="22.0" prefWidth="882.0" style="-fx-background-color: #d1cdd1;" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="22.0" prefWidth="882.0" style="-fx-background-color: #E59866;" BorderPane.alignment="CENTER" />
    </bottom>
    <left>
-      <VBox prefHeight="336.0" prefWidth="100.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="336.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: orange;" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="ControllButton" mnemonicParsing="false" onAction="#Controll" prefHeight="66.0" prefWidth="102.0" style="-fx-background-color: white;" text="Control" />
             <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Click" prefHeight="59.0" prefWidth="102.0" style="-fx-background-color: white;" text="Graphes">
@@ -45,6 +45,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
+            <Button fx:id="Deco" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="73.0" prefWidth="122.0" style="-fx-background-color: white;" text="Déconnexion" />
          </children>
       </VBox>
    </left>

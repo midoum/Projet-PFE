@@ -11,7 +11,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
@@ -27,6 +28,8 @@ public class BonjourController implements Initializable{
 
 @FXML
 private Button Acceuil;
+@FXML
+private Button Deco;
 @FXML
 private Button Settings;
 @FXML
@@ -85,6 +88,14 @@ protected void  Close(ActionEvent e2) throws IOException{
 	stage.close();
 	
 }
+@FXML
+protected void  Deconnexion(ActionEvent e20) throws IOException{
+	Stage stage=Home.getStage();
+	Parent r=FXMLLoader.load(getClass().getResource("login.fxml"));
+	Scene s=new Scene(r);
+	stage.setScene(s);
+	
+}
 @Override
 public void initialize(URL location, ResourceBundle resources) {
 	
@@ -94,6 +105,7 @@ public void initialize(URL location, ResourceBundle resources) {
 	
 	
 		Bp.setCenter(s3);
+		
 	} catch (IOException e) {
 		
 		e.printStackTrace();

@@ -32,6 +32,8 @@ public  LineChartConstruct() throws SQLException {
               
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
+        xAxis.setAnimated(false);
+        yAxis.setAnimated(false);
     
       //creer graphe
          lineChart = 
@@ -62,6 +64,7 @@ series.setName("'"+Donne+"'");
        
         	int x=i++;
         	  XYChart.Data<Number,Number>  data=new XYChart.Data(x,yy);
+        	  
         	        
         	        series.getData().add(data );
       
@@ -78,7 +81,7 @@ series.setName("'"+Donne+"'");
         lineChart.getData().add(series);
     
         
-   
+   System.out.println(yy);
  
    }
  public void setDate(String Date) {

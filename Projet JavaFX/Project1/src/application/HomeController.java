@@ -39,6 +39,7 @@ public class HomeController implements Initializable{
 	    private Label lpass;
 	  @FXML
 	    private Label p;
+	  
 	  @FXML
 	    private ProgressIndicator progressindicator;
 	  @FXML
@@ -54,6 +55,7 @@ public class HomeController implements Initializable{
 	  @FXML 
 	 
 	  protected void  ButtonConnect(ActionEvent event) throws IOException {
+		
 		  Task<?>  Charge = null;
 		 
 		
