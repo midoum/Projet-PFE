@@ -1,5 +1,6 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,6 +46,12 @@ private Label passt;
 @FXML
 private Label passconft;
 
+@FXML
+protected void  Close(ActionEvent e2) throws IOException{
+	Stage stage=Home.getStage();
+	stage.close();
+	
+}
 @FXML	
 	public void ValiderAction(ActionEvent e){
 	  Task<?>  Charge = null;
@@ -72,7 +79,7 @@ private Label passconft;
 			}else if (passconf.getText().isEmpty()){
 				passconf.setStyle("-fx-border-color:red");
 				passconft.setText("Ce champ est obligatoire");}
-			else if((pass.getText().contains(passconf.getText()))!=true){
+			else if((pass.getText()==(passconf.getText()))!=true){
 				pass.setStyle("-fx-border-color:red");
 				
 				passconf.setStyle("-fx-border-color:red");
@@ -114,7 +121,7 @@ private Label passconft;
 		System.out.println(e1);
 	}
 	}
-	
+
   public Task<?> Progres() {
 	    return new Task<Object>() {
 	      @Override

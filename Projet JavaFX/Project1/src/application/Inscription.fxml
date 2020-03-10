@@ -5,9 +5,11 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="823.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
    <children>
       <TextField fx:id="nom" layoutX="213.0" layoutY="100.0" prefHeight="25.0" prefWidth="149.0" />
       <TextField fx:id="prenom" layoutX="213.0" layoutY="150.0" />
@@ -25,6 +27,15 @@
       <Label fx:id="prenomt" layoutX="423.0" layoutY="154.0" />
       <Label fx:id="pseudot" layoutX="423.0" layoutY="207.0" />
       <Label fx:id="passt" layoutX="423.0" layoutY="272.0" />
-      <Label fx:id="passconft" layoutX="423.0" layoutY="315.0" prefHeight="17.0" prefWidth="28.0" />
+      <Label fx:id="passconft" layoutX="406.0" layoutY="315.0" prefHeight="17.0" prefWidth="0.0" />
+      <Button layoutX="757.0" layoutY="14.0" mnemonicParsing="false" onAction="#Close" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../../application/icons/remove-symbol.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </Pane>

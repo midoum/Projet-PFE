@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
 <entry loc="C:\Program Files\Java\jdk-13.0.1" stamp="1575444664155"/>
+<<<<<<< HEAD
 <entry loc="C:\Program Files\Java" stamp="1583783638723"/>
 <entry loc="C:\Program Files\Java\jre1.8.0_241" stamp="1583780549529"/>
+=======
+>>>>>>> parent of 5faa6a2... Resatauration
 <entry loc="C:\Program Files\Java\jre1.8.0_231" stamp="1571895015303"/>
-<entry loc="C:\Program Files\Java\jdk-13.0.2" stamp="1580736073925"/>
+<entry loc="C:\Program Files\Java\jdk-13.0.2" stamp="1583779131922"/>
+<entry loc="C:\Program Files\Java\Jre" stamp="1583780894801"/>
 </dirs>

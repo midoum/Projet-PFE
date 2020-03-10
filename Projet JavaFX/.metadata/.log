@@ -2565,7 +2565,6 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-<<<<<<< HEAD
 !SESSION 2020-03-09 15:42:09.960 -----------------------------------------------
 eclipse.buildId=4.14.0.I20191210-0610
 java.version=1.8.0_241
@@ -6447,6 +6446,7 @@ Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/midoum
 	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1293)
 	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:244)
 	... 3 more
+<<<<<<< HEAD
 =======
 >>>>>>> parent of b18d289... 10/03/2020
 !SESSION 2020-03-10 09:32:19.973 -----------------------------------------------
@@ -6607,4 +6607,12 @@ org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 2; Le contenu des é
 !MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
 
 !ENTRY org.eclipse.jdt.core 4 0 2020-03-10 09:43:25.746
+!MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
+=======
+>>>>>>> parent of 5faa6a2... Resatauration
+
+!ENTRY org.eclipse.jdt.core 4 0 2020-03-10 09:44:49.982
+!MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
+
+!ENTRY org.eclipse.jdt.core 4 0 2020-03-10 09:44:52.005
 !MESSAGE Invalid ZIP archive: javafx.properties [in Project1]
