@@ -32,12 +32,7 @@ public class ChartController  implements Initializable{
 	  
 	    @FXML
 	    protected void   rechercher(ActionEvent e) throws SQLException {
-	    	new XYLineChartExample(null).setDonne(valeurs.getSelectionModel().getSelectedItem());
-
-	    		String 	SelDate =date.getSelectionModel().getSelectedItem();
-	    		new XYLineChartExample(null).setDate(SelDate);
-	  
-	    		new XYLineChartExample(null);
+	    	new LineChartConstruct("new");
 	    
 	    }  
 	    @FXML
