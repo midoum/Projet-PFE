@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -90,19 +89,6 @@
          </image>
       </ImageView>
       <Button fx:id="Save" layoutX="494.0" layoutY="321.0" mnemonicParsing="false" onAction="#Enregistrer" text="Enregistrer" />
-      <ProgressBar fx:id="indicl" layoutX="283.0" layoutY="110.0" prefHeight="18.0" prefWidth="200.0" progress="0.0" />
-      <ProgressBar fx:id="indicd" layoutX="283.0" layoutY="165.0" prefWidth="200.0" progress="0.0" />
-      <ProgressBar fx:id="indict" layoutX="283.0" layoutY="217.0" prefHeight="18.0" prefWidth="200.0" progress="0.0" />
-      <ProgressBar fx:id="indich" layoutX="283.0" layoutY="269.0" prefWidth="200.0" progress="0.0" />
-      <Button layoutX="66.0" layoutY="223.0" mnemonicParsing="false" onAction="#Center" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView fitHeight="22.0" fitWidth="32.0">
-               <image>
-                  <Image url="@../../application/icons/vertical-resizing-option.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
    </children>
    <rotationAxis>
       <Point3D />

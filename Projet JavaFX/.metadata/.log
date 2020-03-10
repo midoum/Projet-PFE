@@ -2565,6 +2565,7 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+<<<<<<< HEAD
 !SESSION 2020-03-09 15:42:09.960 -----------------------------------------------
 eclipse.buildId=4.14.0.I20191210-0610
 java.version=1.8.0_241
@@ -6446,3 +6447,5 @@ Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/midoum
 	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1293)
 	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:244)
 	... 3 more
+=======
+>>>>>>> parent of b18d289... 10/03/2020

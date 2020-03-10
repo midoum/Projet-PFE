@@ -21,7 +21,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -33,14 +32,7 @@ public class ControllController implements Initializable{
 	int fe=0;
 @FXML
 ComboBox<String> portList;
-@FXML
-private ProgressBar indicl;
-@FXML
-private ProgressBar indict;
-@FXML
-private ProgressBar indicd;
-@FXML
-private ProgressBar indich;
+
 @FXML
 private TextField f;
 @FXML
@@ -118,10 +110,6 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 						distance.setText(mot[1]);
 						temper.setText(mot[2]);
 						humi.setText(mot[3]);
-						indicl.setProgress(lum*0.005);
-						indict.setProgress(tem*0.01);
-						indicd.setProgress(dis*0.004);
-						indich.setProgress(hum*0.01);
 					 lum=Integer.parseInt(mot[0]);
 					 dis=Integer.parseInt(mot[1]);
 					 tem=Integer.parseInt(mot[2]);
@@ -165,13 +153,6 @@ protected void left(ActionEvent e8) throws IOException{
 	c.start();
 }
 @FXML
-protected void Center(ActionEvent e33) throws IOException{
-	Thread c=new Thread(){
-		public void run() {Envoyer("4");
-	}};
-	c.start();
-}
-@FXML
 protected void right(ActionEvent e9) throws IOException{
 	Thread d=new Thread(){
 		public void run() {Envoyer("3");
@@ -196,7 +177,6 @@ public void initialize(URL arg0, ResourceBundle arg1) {
 System.out.println(portList.getItems().toString());
 	
 }
-
 public void Envoyer(String message) {
 	// wait after connecting, so the bootloader can finish
 	try {Thread.sleep(100); } catch(Exception e) {}
