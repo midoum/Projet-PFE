@@ -1,26 +1,23 @@
 package application;
 
-import java.net.URL; 
+import java.net.URL;  
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
+
 import java.util.ResourceBundle;
 
+import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.SwingUtilities;
-import javax.swing.WindowConstants;
 
-import com.mysql.cj.protocol.Resultset;
+
 
 import javafx.embed.swing.SwingNode;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import net.proteanit.sql.DbUtils;
 
 
@@ -70,9 +67,12 @@ public class ChartController  implements Initializable{
 	             	ResultSet rs = null;
 	    	    	String req="select * from temp";
 	    	    	new Connect().connect(req);
+	    	    	JPanel p=new JPanel();
+	    	    	
 	    	    	JTable t=new JTable();
-	    	    	 t.setModel(DbUtils.resultSetToTableModel(rs));
-	                swingNode.setContent(t);
+	    	    	
+	    	    	 p.add(t);
+	    	    	 swingNode.setContent(p);
 	            }
 	        });
 	    }
