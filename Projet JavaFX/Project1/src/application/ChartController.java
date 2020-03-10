@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 
@@ -44,9 +45,9 @@ public class ChartController  implements Initializable{
 	    	
 	    	
 	    	LineChartConstruct chart=new LineChartConstruct();
-	        chart.setAlwaysOnTop(true);
+	       
 	        chart.pack();
-	        chart.setSize(600, 400);
+	        
 	        
 	        chart.setVisible(true);
 	    
@@ -64,15 +65,17 @@ public class ChartController  implements Initializable{
 	        SwingUtilities.invokeLater(new Runnable() {
 	            @Override
 	            public void run() {
-	             	ResultSet rs = null;
+	             	
 	    	    	String req="select * from temp";
 	    	    	new Connect().connect(req);
-	    	    	JPanel p=new JPanel();
+	    	    	  
+	    	    	   ResultSet rs=new Connect().getRs();
+	    	    	    JTable jt=new JTable();    
+	    	    	    jt.setModel(DbUtils.resultSetToTableModel(rs));
+	    	    	    jt.setBounds(30,40,200,300);          
+	    	    	    JScrollPane sp=new JScrollPane(jt); 
 	    	    	
-	    	    	JTable t=new JTable();
-	    	    	
-	    	    	 p.add(t);
-	    	    	 swingNode.setContent(p);
+	    	    	    swingNode.setContent(sp);
 	            }
 	        });
 	    }

@@ -39,8 +39,8 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 private JPanel createChartPanel() throws SQLException {
 	  String chartTitle = "Graphe de "+Donne;
-	    String xAxisLabel = "" ;
-	    String yAxisLabel = "";
+	    String xAxisLabel = "id" ;
+	    String yAxisLabel = Donne;
 	 
 	    XYDataset dataset = createDataset();
 	 
