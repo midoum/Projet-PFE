@@ -34,7 +34,7 @@ public class ChartController  implements Initializable{
 	  private Pane p;
 
 	   ResultSet rs;
-	
+
 	  
 	    @FXML
 	    protected void   rechercher(ActionEvent e) throws SQLException {

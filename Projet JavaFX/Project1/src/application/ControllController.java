@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -26,6 +27,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 
 
 public class ControllController implements Initializable{
@@ -33,6 +35,7 @@ public class ControllController implements Initializable{
 	int fe=0;
 @FXML
 ComboBox<String> portList;
+
 @FXML
 private ProgressBar indicl;
 @FXML
@@ -81,7 +84,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_SCANNER, 0, 0);
 		if(chosenPort.openPort()) {
 			connectButton.setText("Disconnect");
-			connectimg.setImage(new Image("@../../application/icons/cross-mark-on-a-black-circle-background.png"));
+			connectimg.setImage(new Image("application/cross-mark-on-a-black-circle-background.png"));
 
 		
 			
@@ -93,7 +96,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 	} else {
 		chosenPort.closePort();	
 		connectButton.setText("Connect");
-		connectimg.setImage(new Image("@../../application/icons/correct-symbol.png"));
+		connectimg.setImage(new Image("application/correct-symbol.png"));
 		
 	}}
 	
@@ -118,7 +121,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 						distance.setText(mot[1]);
 						temper.setText(mot[2]);
 						humi.setText(mot[3]);
-						indicl.setProgress(lum*0.005);
+						indicl.setProgress(lum*0.007);
 						indict.setProgress(tem*0.01);
 						indicd.setProgress(dis*0.004);
 						indich.setProgress(hum*0.01);
@@ -134,6 +137,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		};
 		thread2.start();
 	}
+
 	@FXML
 	protected void Enregistrer(ActionEvent e12) throws IOException{
 		Date Date=new Date();
@@ -194,8 +198,10 @@ public void initialize(URL arg0, ResourceBundle arg1) {
 		portList.getItems().add(portNames[i].getSystemPortName());
 	
 System.out.println(portList.getItems().toString());
+
 	
 }
+
 
 public void Envoyer(String message) {
 	// wait after connecting, so the bootloader can finish

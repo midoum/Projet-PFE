@@ -21,7 +21,7 @@ import org.jfree.data.xy.XYSeriesCollection;
   static  String Donne;
   static String Date;
   ResultSet rs;
- int x=1;
+ int x=0;
   int y;
   public LineChartConstruct() throws SQLException {
 
@@ -32,7 +32,7 @@ import org.jfree.data.xy.XYSeriesCollection;
     JPanel chartPanel = createChartPanel();
     add(chartPanel, BorderLayout.CENTER);
 
-    setSize(640, 480);
+    setSize(740, 580);
  
     setLocationRelativeTo(null);
 }
@@ -43,6 +43,7 @@ private JPanel createChartPanel() throws SQLException {
 	    String yAxisLabel = Donne;
 	 
 	    XYDataset dataset = createDataset();
+
 	 
 	    JFreeChart chart = ChartFactory.createXYLineChart(chartTitle,
 	            xAxisLabel, yAxisLabel, dataset);

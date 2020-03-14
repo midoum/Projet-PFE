@@ -19,5 +19,26 @@
 	<classpathentry kind="lib" path="orsonpdf-1.6-eval.jar"/>
 	<classpathentry kind="lib" path="servlet.jar"/>
 	<classpathentry kind="lib" path="swtgraphics2d.jar"/>
+	<classpathentry kind="lib" path="/Project1/rs2xml.jar"/>
+	<classpathentry kind="lib" path="/Project1/common-2.3.jar"/>
+	<classpathentry kind="lib" path="/Project1/core-2.3.jar"/>
+	<classpathentry kind="lib" path="/Project1/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx.base.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx.media.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="/Project1/javafx.web.jar"/>
+	<classpathentry kind="lib" path="/Project1/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="/Project1/jSerialComm-2.5.3.jar"/>
+	<classpathentry kind="lib" path="/Project1/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="/Project1/mysql-connector-java-8.0.19.jar"/>
+	<classpathentry kind="lib" path="/Project1/netty-all-4.1.20.Final.jar"/>
+	<classpathentry kind="lib" path="/Project1/orsoncharts-1.4-eval-nofx.jar"/>
+	<classpathentry kind="lib" path="/Project1/orsonpdf-1.6-eval.jar"/>
+	<classpathentry kind="lib" path="/Project1/socket-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.19.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
