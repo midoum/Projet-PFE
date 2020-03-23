@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsController">
@@ -15,8 +17,16 @@
       <Label fx:id="usert" layoutX="230.0" layoutY="163.0" textFill="#eb0b0b" />
       <Label fx:id="oldpasst" layoutX="230.0" layoutY="246.0" textFill="#e40b0b" />
       <Label fx:id="newpasst" layoutX="230.0" layoutY="337.0" textFill="#f20c0c" />
-      <Button layoutX="508.0" layoutY="346.0" mnemonicParsing="false" onAction="#Valider" text="Valider" />
+      <Button layoutX="512.0" layoutY="336.0" mnemonicParsing="false" onAction="#Valider" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="32.0">
+               <image>
+                  <Image url="@../../application/icons/checked-symbol.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <PasswordField fx:id="oldpass" layoutX="217.0" layoutY="200.0" />
       <PasswordField fx:id="newpass" layoutX="217.0" layoutY="285.0" />
+      <Label layoutX="518.0" layoutY="380.0" text="Valider" />
    </children>
 </Pane>

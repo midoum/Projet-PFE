@@ -20,6 +20,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class InscriptionController implements Initializable{
@@ -66,7 +67,7 @@ protected void  Close(ActionEvent e2) throws IOException{
 		
 			if(nom.getText().isEmpty()){
 				nom.setStyle("-fx-border-color:red");
-				nomt.setText("Ce ch	amp est obligatoire");
+				nomt.setText("Ce champ est obligatoire");
 			}else if(prenom.getText().isEmpty()){
 				prenom.setStyle("-fx-border-color:red");
 				prenomt.setText("Ce champ est obligatoire");
@@ -83,7 +84,7 @@ protected void  Close(ActionEvent e2) throws IOException{
 				pass.setStyle("-fx-border-color:red");
 				
 				passconf.setStyle("-fx-border-color:red");
-				passconft.setText("Le mot de passe doit être identique");
+				passconft.setText("Mot de passe non identique");
 				}else{
 					System.out.println("Connected");
 						
@@ -136,6 +137,14 @@ protected void  Close(ActionEvent e2) throws IOException{
 	      }
 	    };
 	}
+  @FXML	
+	public void Retour(ActionEvent e1) throws IOException{
+	  Stage s=Home.getStage();
+	  Parent p=FXMLLoader.load(getClass().getResource("login.fxml"));
+	  Scene sc=new Scene(p);
+	  s.setScene(sc);
+	  s.show();
+  }
 
 @Override
 public void initialize(URL location, ResourceBundle resources) {

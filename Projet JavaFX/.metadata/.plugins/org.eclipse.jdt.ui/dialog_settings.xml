@@ -41,7 +41,7 @@
 	</section>
 	<section name="FatJarPackageWizard">
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="C:\Users\Shredder\Desktop\Projet JavaFX.xml"/>
-		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Home - Project1"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Home (1) - Project1"/>
 		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="C:\Users\ahmed\Desktop\Desktop\JavafxProject.jar"/>
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
 		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
@@ -96,5 +96,7 @@
 		</list>
 	</section>
 	<section name="JavaElementSearchActions">
+	</section>
+	<section name="RenameInformationPopup">
 	</section>
 </section>
