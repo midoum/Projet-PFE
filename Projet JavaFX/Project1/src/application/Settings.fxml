@@ -7,26 +7,65 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsController">
+<Pane maxHeight="600.0" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsController">
    <children>
-      <TextField fx:id="user" layoutX="217.0" layoutY="118.0" />
-      <Label layoutX="62.0" layoutY="122.0" text="Pseudo" />
-      <Label layoutX="62.0" layoutY="204.0" text="Ancien mot de passe" />
-      <Label layoutX="62.0" layoutY="280.0" text="Nouveau mot de passe" />
-      <Label fx:id="usert" layoutX="230.0" layoutY="163.0" textFill="#eb0b0b" />
-      <Label fx:id="oldpasst" layoutX="230.0" layoutY="246.0" textFill="#e40b0b" />
-      <Label fx:id="newpasst" layoutX="230.0" layoutY="337.0" textFill="#f20c0c" />
-      <Button layoutX="512.0" layoutY="336.0" mnemonicParsing="false" onAction="#Valider" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView fitHeight="28.0" fitWidth="32.0">
+      <Pane minHeight="0.0" minWidth="0.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="890.0">
                <image>
-                  <Image url="@../../application/icons/checked-symbol.png" />
+                  <Image url="@../../application/Background/3257525.jpg" />
                </image>
             </ImageView>
-         </graphic></Button>
-      <PasswordField fx:id="oldpass" layoutX="217.0" layoutY="200.0" />
-      <PasswordField fx:id="newpass" layoutX="217.0" layoutY="285.0" />
-      <Label layoutX="518.0" layoutY="380.0" text="Valider" />
+            <TextField fx:id="user" layoutX="415.0" layoutY="186.0" />
+            <Label layoutX="147.0" layoutY="164.0" text="Pseudo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="147.0" layoutY="246.0" text="Ancien mot de passe">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="147.0" layoutY="322.0" text="Nouveau mot de passe">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="usert" layoutX="315.0" layoutY="205.0" textFill="#eb0b0b">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="oldpasst" layoutX="315.0" layoutY="288.0" textFill="#e40b0b">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="newpasst" layoutX="315.0" layoutY="379.0" textFill="#f20c0c">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="749.0" layoutY="448.0" mnemonicParsing="false" onAction="#Valider" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="57.0">
+                     <image>
+                        <Image url="@../../application/icons/checked-symbol.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <PasswordField fx:id="oldpass" layoutX="415.0" layoutY="268.0" />
+            <PasswordField fx:id="newpass" layoutX="415.0" layoutY="353.0" />
+            <Label layoutX="755.0" layoutY="492.0" text="Valider">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
 </Pane>
