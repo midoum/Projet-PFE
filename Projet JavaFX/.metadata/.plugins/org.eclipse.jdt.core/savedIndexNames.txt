@@ -12,7 +12,6 @@ INDEX VERSION 1.131+C:\Users\ahmed\Documents\GitHub\Projet-PFE\Projet JavaFX\.me
 812310046.index
 3141854128.index
 2620053421.index
-712673515.index
 3109073125.index
 2721238396.index
 3390857219.index
