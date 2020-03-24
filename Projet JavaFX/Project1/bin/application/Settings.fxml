@@ -15,54 +15,54 @@
          <children>
             <ImageView fitHeight="600.0" fitWidth="890.0">
                <image>
-                  <Image url="@../../application/Background/3257525.jpg" />
+                  <Image url="@3230442.jpg" />
                </image>
             </ImageView>
             <TextField fx:id="user" layoutX="415.0" layoutY="186.0" />
-            <Label layoutX="147.0" layoutY="164.0" text="Pseudo">
+            <Label layoutX="145.0" layoutY="188.0" text="Pseudo" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="147.0" layoutY="246.0" text="Ancien mot de passe">
+            <Label layoutX="145.0" layoutY="270.0" text="Ancien mot de passe" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="147.0" layoutY="322.0" text="Nouveau mot de passe">
+            <Label layoutX="145.0" layoutY="346.0" text="Nouveau mot de passe" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="usert" layoutX="315.0" layoutY="205.0" textFill="#eb0b0b">
+            <Label fx:id="usert" layoutX="320.0" layoutY="220.0" textFill="#eb0b0b">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="oldpasst" layoutX="315.0" layoutY="288.0" textFill="#e40b0b">
+            <Label fx:id="oldpasst" layoutX="320.0" layoutY="310.0" textFill="#e40b0b">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="newpasst" layoutX="315.0" layoutY="379.0" textFill="#f20c0c">
+            <Label fx:id="newpasst" layoutX="320.0" layoutY="400.0" textFill="#f20c0c">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="749.0" layoutY="448.0" mnemonicParsing="false" onAction="#Valider" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: transparent;">
+            <Button layoutX="749.0" layoutY="448.0" mnemonicParsing="false" onAction="#Valider" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: white; -fx-background-radius: 400;">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="57.0">
+                  <ImageView fitHeight="33.0" fitWidth="39.0">
                      <image>
-                        <Image url="@../../application/icons/checked-symbol.png" />
+                        <Image url="@checked-symbol.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
             <PasswordField fx:id="oldpass" layoutX="415.0" layoutY="268.0" />
             <PasswordField fx:id="newpass" layoutX="415.0" layoutY="353.0" />
-            <Label layoutX="755.0" layoutY="492.0" text="Valider">
+            <Label layoutX="755.0" layoutY="492.0" prefHeight="30.0" prefWidth="69.0" text="Valider" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font size="17.0" />
                </font>
             </Label>
          </children>

@@ -10,7 +10,7 @@
 
 <BorderPane fx:id="Bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="1037.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BonjourController">
    <top>
-      <Pane prefHeight="27.0" prefWidth="882.0" style="-fx-background-color: gray; -fx-border-color: gray;" BorderPane.alignment="CENTER">
+      <Pane prefHeight="27.0" prefWidth="1037.0" style="-fx-background-color: gray; -fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="991.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" prefHeight="26.0" prefWidth="25.0" style="-fx-background-color: transparent;">
                <graphic>
@@ -24,9 +24,9 @@
          </children></Pane>
    </top>
    <left>
-      <VBox prefHeight="597.0" prefWidth="143.0" style="-fx-background-color: white; -fx-border-color: gray;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="597.0" prefWidth="143.0" style="-fx-background-color: white; -fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="ControllButton" mnemonicParsing="false" onAction="#Controll" prefHeight="130.0" prefWidth="141.0" style="-fx-background-color: white;" text="Contrôl">
+            <Button fx:id="ControllButton" mnemonicParsing="false" onAction="#Controll" prefHeight="100.0" prefWidth="141.0" style="-fx-background-color: white;" text="Contrôl">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="47.0">
                      <image>
@@ -35,9 +35,9 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="19.0" />
+                  <Font size="17.0" />
                </font></Button>
-            <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Click" prefHeight="130.0" prefWidth="141.0" style="-fx-background-color: white;" text="Graphes">
+            <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Click" prefHeight="100.0" prefWidth="141.0" style="-fx-background-color: white;" text="Graphes">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -46,9 +46,9 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="19.0" />
+                  <Font size="17.0" />
                </font></Button>
-            <Button fx:id="Settings" mnemonicParsing="false" onAction="#Changersettings" prefHeight="130.0" prefWidth="141.0" style="-fx-background-color: white;" text="Setting" textFill="black">
+            <Button fx:id="Settings" mnemonicParsing="false" onAction="#Changersettings" prefHeight="100.0" prefWidth="141.0" style="-fx-background-color: white;" text="Setting" textFill="black">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -57,9 +57,9 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="19.0" />
+                  <Font size="17.0" />
                </font></Button>
-            <Button fx:id="Deco" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="130.0" prefWidth="141.0" style="-fx-background-color: white;" text="Déconnexion" textAlignment="CENTER" wrapText="true">
+            <Button fx:id="Deco" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="100.0" prefWidth="141.0" style="-fx-background-color: white;" text="Déconnexion" textAlignment="CENTER" wrapText="true">
                <graphic>
                   <ImageView fitHeight="31.0" fitWidth="39.0">
                      <image>
@@ -68,7 +68,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="19.0" />
+                  <Font size="17.0" />
                </font></Button>
          </children>
       </VBox>

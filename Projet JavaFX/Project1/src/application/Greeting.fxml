@@ -10,10 +10,10 @@
    <children>
       <ImageView fitHeight="595.0" fitWidth="890.0">
          <image>
-            <Image url="@../../application/Background/3257525.jpg" />
+            <Image url="@3230442.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="gmessage" layoutX="200.0" layoutY="184.0" prefHeight="200.0" prefWidth="491.0" text="Bienvenue">
+      <Label fx:id="gmessage" layoutX="200.0" layoutY="184.0" prefHeight="200.0" prefWidth="491.0" text="Bienvenue" textFill="#eeeded">
          <font>
             <Font size="96.0" />
          </font>

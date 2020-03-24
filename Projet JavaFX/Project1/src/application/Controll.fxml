@@ -13,74 +13,74 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllController">
    <children>
-      <ImageView fitHeight="595.0" fitWidth="890.0">
+      <ImageView fitHeight="595.0" fitWidth="890.0" style="-fx-opacity: 1;">
          <image>
-            <Image url="@../../application/Background/3257525.jpg" />
+            <Image url="@3230442.jpg" />
          </image>
       </ImageView>
       <ComboBox fx:id="portList" layoutX="584.0" layoutY="63.0" prefWidth="150.0" />
-      <Button fx:id="connectButton" layoutX="749.0" layoutY="56.0" mnemonicParsing="false" onAction="#RobotControll" prefHeight="37.0" prefWidth="26.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Connect" translateZ="10.0">
+      <Button fx:id="connectButton" layoutX="749.0" layoutY="56.0" mnemonicParsing="false" onAction="#RobotControll" prefHeight="38.0" prefWidth="99.0" style="-fx-background-color: white;" text="Connect" translateZ="10.0">
          <graphic>
             <ImageView fx:id="connectimg" fitHeight="30.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" style="background-color: transparent;">
                <image>
-                  <Image url="@../../application/icons/correct-symbol.png" />
+                  <Image url="@correct-symbol.png" />
                </image>
             </ImageView>
          </graphic></Button>
       <TextField fx:id="f" layoutX="485.0" layoutY="450.0" />
-      <Label fx:id="temp" layoutX="495.0" layoutY="479.0" text="Metter votre lien stream">
+      <Label fx:id="temp" layoutX="495.0" layoutY="479.0" text="Metter votre lien stream" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Button fx:id="up" layoutX="721.0" layoutY="251.0" mnemonicParsing="false" onAction="#up" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: transparent;">
+      <Button fx:id="up" layoutX="721.0" layoutY="251.0" mnemonicParsing="false" onAction="#up" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0" rotate="90.0">
                <image>
-                  <Image url="@../../application/icons/left-arrow.png" />
+                  <Image url="@icons/left-arrow.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="down" layoutX="721.0" layoutY="345.0" mnemonicParsing="false" onAction="#down" style="-fx-background-color: transparent;">
+      <Button fx:id="down" layoutX="721.0" layoutY="345.0" mnemonicParsing="false" onAction="#down" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0" rotate="-90.0">
                <image>
-                  <Image url="@../../application/icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="right" layoutX="771.0" layoutY="297.0" mnemonicParsing="false" onAction="#right" prefHeight="35.0" prefWidth="4.0" style="-fx-background-color: transparent;">
+      <Button fx:id="right" layoutX="775.0" layoutY="297.0" mnemonicParsing="false" onAction="#right" prefHeight="35.0" prefWidth="4.0" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0" rotate="180.0">
                <image>
-                  <Image url="@../../application/icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="left" layoutX="676.0" layoutY="297.0" mnemonicParsing="false" onAction="#left" prefHeight="17.0" prefWidth="14.0" style="-fx-background-color: transparent;">
+      <Button fx:id="left" layoutX="670.0" layoutY="297.0" mnemonicParsing="false" onAction="#left" prefHeight="17.0" prefWidth="14.0" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0">
                <image>
-                  <Image url="@../../application/icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button layoutX="416.0" layoutY="450.0" mnemonicParsing="false" onAction="#Stream" prefHeight="11.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+      <Button layoutX="416.0" layoutY="450.0" mnemonicParsing="false" onAction="#Stream" prefHeight="11.0" prefWidth="33.0" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../application/icons/photo-camera.png" />
+                  <Image url="@photo-camera.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Label layoutX="580.0" layoutY="94.0" text="Choisissez le Port (COM) du RoboT">
+      <Label layoutX="580.0" layoutY="94.0" text="Choisissez le Port (COM) du RoboT" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Button fx:id="getData" layoutX="562.0" layoutY="336.0" mnemonicParsing="false" onAction="#GetData" style="-fx-background-color: transparent;">
+      <Button fx:id="getData" layoutX="562.0" layoutY="336.0" mnemonicParsing="false" onAction="#GetData" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="37.0">
                <image>
-                  <Image url="@../../application/icons/eye-open.png" />
+                  <Image url="@eye-open.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -88,55 +88,71 @@
       <TextField fx:id="distance" layoutX="112.0" layoutY="233.0" prefHeight="25.0" prefWidth="58.0" />
       <TextField fx:id="temper" layoutX="111.0" layoutY="171.0" prefHeight="25.0" prefWidth="59.0" />
       <TextField fx:id="humi" layoutX="114.0" layoutY="292.0" prefHeight="25.0" prefWidth="58.0" />
-      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="65.0" layoutY="344.0">
-         <image>
-            <Image url="@../../application/icons/luminosity.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="65.0" layoutY="227.0">
-         <image>
-            <Image url="@../../application/icons/kisspng-computer-icons-navigation-distances-5b0590b8851b37.3866603515270913845452.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="65.0" layoutY="165.0">
-         <image>
-            <Image url="@../../application/icons/temp.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="65.0" layoutY="290.0">
-         <image>
-            <Image url="@../../application/icons/humidity.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="Save" layoutX="461.0" layoutY="336.0" mnemonicParsing="false" onAction="#Enregistrer" style="-fx-background-color: transparent;">
+      <Button fx:id="Save" layoutX="461.0" layoutY="336.0" mnemonicParsing="false" onAction="#Enregistrer" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="40.0">
                <image>
-                  <Image url="@../../application/icons/save-file-option.png" />
+                  <Image url="@save-file-option.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <ProgressBar fx:id="indicl" layoutX="99.0" layoutY="389.0" prefHeight="18.0" prefWidth="84.0" progress="0.0" />
-      <ProgressBar fx:id="indicd" layoutX="101.0" layoutY="265.0" prefHeight="18.0" prefWidth="84.0" progress="0.0" />
-      <ProgressBar fx:id="indict" layoutX="101.0" layoutY="203.0" prefHeight="18.0" prefWidth="84.0" progress="0.0" />
-      <ProgressBar fx:id="indich" layoutX="101.0" layoutY="320.0" prefHeight="18.0" prefWidth="84.0" progress="0.0" />
-      <Button layoutX="718.0" layoutY="299.0" mnemonicParsing="false" onAction="#Center" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+      <ProgressBar fx:id="indicl" layoutX="100.0" layoutY="389.0" prefHeight="20.0" prefWidth="80.0" progress="0.0" />
+      <ProgressBar fx:id="indicd" layoutX="100.0" layoutY="265.0" prefHeight="20.0" prefWidth="80.0" progress="0.0" />
+      <ProgressBar fx:id="indict" layoutX="100.0" layoutY="203.0" prefHeight="20.0" prefWidth="80.0" progress="0.0" />
+      <ProgressBar fx:id="indich" layoutX="100.0" layoutY="320.0" prefHeight="20.0" prefWidth="80.0" progress="0.0" />
+      <Button layoutX="721.0" layoutY="299.0" mnemonicParsing="false" onAction="#Center" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="22.0" fitWidth="32.0">
                <image>
-                  <Image url="@../../application/icons/vertical-resizing-option.png" />
+                  <Image url="@vertical-resizing-option.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="463.0" layoutY="373.0" text="Enregistrer">
+      <Label layoutX="463.0" layoutY="373.0" text="Enregistrer" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label layoutX="562.0" layoutY="374.0" text="Consulter">
+      <Label layoutX="562.0" layoutY="374.0" text="Consulter" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Label>
+      <Label layoutX="50.0" layoutY="165.0" prefHeight="47.0" prefWidth="45.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="42.0">
+               <image>
+                  <Image url="@temp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="50.0" layoutY="243.0" prefWidth="45.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="42.0">
+               <image>
+                  <Image url="@kisspng-computer-icons-navigation-distances-5b0590b8851b37.3866603515270913845452.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="50.0" layoutY="306.0" prefWidth="45.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0">
+               <image>
+                  <Image url="@humidity.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="50.0" layoutY="360.0" prefWidth="45.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="45.0">
+               <image>
+                  <Image url="@luminosity.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
    </children>
    <rotationAxis>
       <Point3D />

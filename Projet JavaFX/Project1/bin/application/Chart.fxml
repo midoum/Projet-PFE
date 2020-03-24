@@ -12,33 +12,33 @@
    <children>
       <ImageView fitHeight="595.0" fitWidth="890.0">
          <image>
-            <Image url="@../../application/Background/3257525.jpg" />
+            <Image url="@3230442.jpg" />
          </image>
       </ImageView>
       <ComboBox fx:id="date" layoutX="601.0" layoutY="127.0" prefWidth="150.0" />
-      <Button fx:id="valider" layoutX="691.0" layoutY="229.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: transparent;">
+      <Button fx:id="valider" layoutX="691.0" layoutY="229.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="37.0" fitWidth="42.0">
                <image>
-                  <Image url="@../../application/icons/bar-graph-on-a-rectangle.png" />
+                  <Image url="@bar-graph-on-a-rectangle.png" />
                </image>
             </ImageView>
          </graphic></Button>
       <Pane fx:id="p" prefHeight="595.0" prefWidth="591.0" />
-      <Button layoutX="623.0" layoutY="230.0" mnemonicParsing="false" onAction="#MontrerTable" style="-fx-background-color: transparent;">
+      <Button layoutX="623.0" layoutY="230.0" mnemonicParsing="false" onAction="#MontrerTable" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="36.0" fitWidth="37.0">
                <image>
-                  <Image url="@../../application/icons/table-grid.png" />
+                  <Image url="@table-grid.png" />
                </image>
             </ImageView>
          </graphic></Button>
       <ComboBox fx:id="valeurs" layoutX="601.0" layoutY="182.0" prefWidth="150.0" />
-      <Label layoutX="625.0" layoutY="290.0" text="Table">
+      <Label layoutX="625.0" layoutY="290.0" text="Table" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font></Label>
-      <Label layoutX="695.0" layoutY="290.0" text="Graphe">
+      <Label layoutX="695.0" layoutY="290.0" text="Graphe" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font></Label>
