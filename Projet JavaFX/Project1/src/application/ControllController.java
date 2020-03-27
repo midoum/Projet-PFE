@@ -169,9 +169,30 @@ protected void left(ActionEvent e8) throws IOException{
 	c.start();
 }
 @FXML
-protected void Center(ActionEvent e33) throws IOException{
+protected void ServoUp(ActionEvent e33) throws IOException{
 	Thread c=new Thread(){
 		public void run() {Envoyer("4");
+	}};
+	c.start();
+}
+@FXML
+protected void ServoDown(ActionEvent e36) throws IOException{
+	Thread c=new Thread(){
+		public void run() {Envoyer("5");
+	}};
+	c.start();
+}
+@FXML
+protected void ServoLeft(ActionEvent e34) throws IOException{
+	Thread c=new Thread(){
+		public void run() {Envoyer("6");
+	}};
+	c.start();
+}
+@FXML
+protected void ServoRight(ActionEvent e32) throws IOException{
+	Thread c=new Thread(){
+		public void run() {Envoyer("7");
 	}};
 	c.start();
 }
