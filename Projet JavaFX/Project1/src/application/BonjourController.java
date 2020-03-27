@@ -48,9 +48,9 @@ protected void  Click(ActionEvent event) throws IOException{
 	f.setToValue(1);
 	f.play();
 	 Bp.setCenter(s);
-	 Acceuil.setStyle("-fx-background-color: Gray;-fx-text-fill:white;-fx-border-color:orange");	
-	 Settings.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
-	 ControllButton.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
+	 Acceuil.setStyle("-fx-background-color: Gray;-fx-text-fill:white;");	
+	 Settings.setStyle("-fx-background-color:white;-fx-text-fill:black;");
+	 ControllButton.setStyle("-fx-background-color:white;-fx-text-fill:black;");
 	
 }
 @FXML
@@ -63,9 +63,9 @@ protected void  Changersettings(ActionEvent e1) throws IOException{
 	f.setToValue(1);
 	f.play();
 	Bp.setCenter(s2);
-	 Acceuil.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
-	 Settings.setStyle("-fx-background-color: gray;-fx-text-fill:white;-fx-border-color:orange");
-	 ControllButton.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
+	 Acceuil.setStyle("-fx-background-color:white;-fx-text-fill:black;");
+	 Settings.setStyle("-fx-background-color: gray;-fx-text-fill:white;");
+	 ControllButton.setStyle("-fx-background-color:white;-fx-text-fill:black;");
 }
 @FXML
 protected void  Controll(ActionEvent e3) throws IOException{
@@ -77,9 +77,9 @@ protected void  Controll(ActionEvent e3) throws IOException{
 	f.setToValue(1);
 	f.play();
 	Bp.setCenter(s0);
-	 Acceuil.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
-	 Settings.setStyle("-fx-background-color:white;-fx-text-fill:black;-fx-border-color:white");
-	 ControllButton.setStyle("-fx-background-color: gray;-fx-text-fill:white;-fx-border-color:orange");
+	 Acceuil.setStyle("-fx-background-color:white;-fx-text-fill:black;");
+	 Settings.setStyle("-fx-background-color:white;-fx-text-fill:black;");
+	 ControllButton.setStyle("-fx-background-color: gray;-fx-text-fill:white;");
 	
 }
 @FXML

@@ -49,7 +49,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="749.0" layoutY="448.0" mnemonicParsing="false" onAction="#Valider" prefHeight="43.0" prefWidth="43.0" style="-fx-background-color: white; -fx-background-radius: 400;">
+            <Button layoutX="749.0" layoutY="448.0" mnemonicParsing="false" onAction="#Valider" prefHeight="43.0" prefWidth="43.0" style="-fx-background-radius: 400; -fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="39.0">
                      <image>

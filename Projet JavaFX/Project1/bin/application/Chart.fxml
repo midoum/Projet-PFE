@@ -8,15 +8,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChartController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChartController">
    <children>
-      <ImageView fitHeight="595.0" fitWidth="890.0">
+      <ImageView fitHeight="600.0" fitWidth="895.0">
          <image>
             <Image url="@3230442.jpg" />
          </image>
       </ImageView>
       <ComboBox fx:id="date" layoutX="601.0" layoutY="127.0" prefWidth="150.0" />
-      <Button fx:id="valider" layoutX="691.0" layoutY="229.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: white;">
+      <Button fx:id="valider" layoutX="691.0" layoutY="229.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="37.0" fitWidth="42.0">
                <image>
@@ -25,7 +25,7 @@
             </ImageView>
          </graphic></Button>
       <Pane fx:id="p" prefHeight="595.0" prefWidth="591.0" />
-      <Button layoutX="623.0" layoutY="230.0" mnemonicParsing="false" onAction="#MontrerTable" style="-fx-background-color: white;">
+      <Button layoutX="623.0" layoutY="230.0" mnemonicParsing="false" onAction="#MontrerTable" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="36.0" fitWidth="37.0">
                <image>

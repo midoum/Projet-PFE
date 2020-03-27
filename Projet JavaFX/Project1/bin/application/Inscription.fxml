@@ -9,18 +9,36 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="822.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="704.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
    <children>
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="705.0" style="-fx-background-color: #141929;">
+         <children>
+            <Button layoutX="666.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="22.0">
+                     <image>
+                        <Image url="@../../application/icons/remove-symbol.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="470.0" fitWidth="757.0" layoutX="-1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@3230442.jpg" />
+         </image>
+      </ImageView>
       <TextField fx:id="nom" layoutX="213.0" layoutY="100.0" prefHeight="25.0" prefWidth="149.0" />
       <TextField fx:id="prenom" layoutX="213.0" layoutY="150.0" />
       <TextField fx:id="pseudo" layoutX="213.0" layoutY="203.0" />
       <PasswordField fx:id="pass" layoutX="213.0" layoutY="259.0" />
       <PasswordField fx:id="passconf" layoutX="213.0" layoutY="311.0" />
-      <Label layoutX="98.0" layoutY="104.0" text="Nom" />
-      <Label layoutX="91.0" layoutY="154.0" text="Prénom" />
-      <Label layoutX="92.0" layoutY="207.0" text="Pseudo" />
-      <Label layoutX="81.0" layoutY="263.0" text="Mot de passe" />
-      <Label layoutX="48.0" layoutY="315.0" text="Confirmer mot de passe" />
+      <Label layoutX="98.0" layoutY="104.0" text="Nom" textFill="WHITE" />
+      <Label layoutX="91.0" layoutY="154.0" text="Prénom" textFill="WHITE" />
+      <Label layoutX="92.0" layoutY="207.0" text="Pseudo" textFill="WHITE" />
+      <Label layoutX="81.0" layoutY="263.0" text="Mot de passe" textFill="WHITE" />
+      <Label layoutX="48.0" layoutY="315.0" text="Confirmer mot de passe" textFill="WHITE" />
       <Button fx:id="Valider" layoutX="527.0" layoutY="371.0" mnemonicParsing="false" onAction="#ValiderAction" prefHeight="40.0" prefWidth="41.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="34.0">
@@ -35,19 +53,6 @@
       <Label fx:id="pseudot" layoutX="423.0" layoutY="207.0" />
       <Label fx:id="passt" layoutX="423.0" layoutY="272.0" />
       <Label fx:id="passconft" layoutX="406.0" layoutY="315.0" prefHeight="17.0" prefWidth="372.0" />
-      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="823.0" style="-fx-background-color: #E59866; -fx-border-color: gray;">
-         <children>
-            <Button layoutX="785.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" style="-fx-background-color: transparent;">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="22.0">
-                     <image>
-                        <Image url="@../../application/icons/remove-symbol.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-         </children>
-      </Pane>
       <Button layoutX="592.0" layoutY="372.0" mnemonicParsing="false" onAction="#Retour" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="35.0">
@@ -57,7 +62,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="534.0" layoutY="418.0" text="Valider" />
-      <Label layoutX="604.0" layoutY="418.0" text="Retour" />
+      <Label layoutX="534.0" layoutY="418.0" text="Valider" textFill="WHITE" />
+      <Label layoutX="604.0" layoutY="418.0" text="Retour" textFill="WHITE" />
    </children>
 </Pane>
