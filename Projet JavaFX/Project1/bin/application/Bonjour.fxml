@@ -10,7 +10,7 @@
 
 <BorderPane fx:id="Bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="1037.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BonjourController">
    <top>
-      <Pane prefHeight="27.0" prefWidth="1037.0" style="-fx-background-color: #141929;" BorderPane.alignment="CENTER">
+      <Pane prefHeight="27.0" prefWidth="1037.0" style="-fx-background-color: Gray;" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="991.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" prefHeight="26.0" prefWidth="25.0" style="-fx-background-color: transparent;">
                <graphic>
