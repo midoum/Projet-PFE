@@ -8,10 +8,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="704.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="704.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
    <children>
-      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="705.0" style="-fx-background-color: #141929;">
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="705.0" style="-fx-background-color: gray;">
          <children>
             <Button layoutX="666.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" style="-fx-background-color: transparent;">
                <graphic>
@@ -24,7 +25,7 @@
             </Button>
          </children>
       </Pane>
-      <ImageView fitHeight="470.0" fitWidth="757.0" layoutX="-1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="466.0" fitWidth="757.0" layoutX="-1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@3230442.jpg" />
          </image>
@@ -48,11 +49,26 @@
             </ImageView>
          </graphic></Button>
       <ProgressIndicator fx:id="progressindicator" layoutX="470.0" layoutY="378.0" progress="0.0" />
-      <Label fx:id="nomt" layoutX="423.0" layoutY="104.0" />
-      <Label fx:id="prenomt" layoutX="423.0" layoutY="154.0" />
-      <Label fx:id="pseudot" layoutX="423.0" layoutY="207.0" />
-      <Label fx:id="passt" layoutX="423.0" layoutY="272.0" />
-      <Label fx:id="passconft" layoutX="406.0" layoutY="315.0" prefHeight="17.0" prefWidth="372.0" />
+      <Label fx:id="nomt" layoutX="423.0" layoutY="104.0" textFill="#e80000">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="prenomt" layoutX="423.0" layoutY="154.0" textFill="#e80000">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="pseudot" layoutX="423.0" layoutY="207.0" textFill="#e80000">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="passt" layoutX="423.0" layoutY="272.0" textFill="#e80000">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="passconft" layoutX="406.0" layoutY="315.0" prefHeight="17.0" prefWidth="372.0" textFill="#e80000">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
       <Button layoutX="592.0" layoutY="372.0" mnemonicParsing="false" onAction="#Retour" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="35.0">

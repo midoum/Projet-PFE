@@ -2,18 +2,25 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane fx:controller="application.AlertController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AlertController">
    <children>
-      <Button fx:id="Oui" onAction="#OuiClick" layoutX="131.0" layoutY="246.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="97.0" text="Oui" />
-      <Label layoutX="18.0" layoutY="33.0" prefHeight="178.0" prefWidth="587.0" text="Le Compte N'existe pas voulez vous en créer un?" textFill="#d32020">
+      <Pane layoutX="-3.0" layoutY="-2.0" prefHeight="29.0" prefWidth="587.0" style="-fx-background-color: gray;" />
+      <ImageView fitHeight="329.0" fitWidth="587.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@3230442.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="Oui" layoutX="131.0" layoutY="246.0" mnemonicParsing="false" onAction="#OuiClick" prefHeight="67.0" prefWidth="97.0" text="Oui" />
+      <Label layoutX="19.0" layoutY="32.0" prefHeight="178.0" prefWidth="587.0" text="Le Compte N'existe pas voulez vous en créer un?" textFill="WHITE">
          <font>
             <Font name="Arial" size="25.0" />
          </font>
       </Label>
-      <Button fx:id="Non" onAction="#NonClick" layoutX="312.0" layoutY="246.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="97.0" text="Non" />
+      <Button fx:id="Non" layoutX="312.0" layoutY="246.0" mnemonicParsing="false" onAction="#NonClick" prefHeight="67.0" prefWidth="97.0" text="Non" />
    </children>
 </Pane>

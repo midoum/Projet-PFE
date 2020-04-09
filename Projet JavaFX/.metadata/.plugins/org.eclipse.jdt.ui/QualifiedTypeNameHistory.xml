@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="javafx.scene.control.RadioButton"/>
 <fullyQualifiedTypeName name="javafx.scene.Group"/>
 <fullyQualifiedTypeName name="javafx.scene.control.ToggleGroup"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="javafx.scene.chart.XYChart.Data"/>
 <fullyQualifiedTypeName name="com.sun.media.jfxmedia.events.NewFrameEvent"/>
 <fullyQualifiedTypeName name="javafx.scene.chart.XYChart"/>
@@ -33,8 +32,6 @@
 <fullyQualifiedTypeName name="org.jfree.chart.plot.XYPlot"/>
 <fullyQualifiedTypeName name="org.jfree.chart.renderer.xy.XYLineAndShapeRenderer"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
-<fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
-<fullyQualifiedTypeName name="application.Connect"/>
 <fullyQualifiedTypeName name="javafx.embed.swing.SwingNode"/>
 <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
 <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
@@ -48,7 +45,6 @@
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="net.proteanit.sql.DbUtils"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="Connect"/>
 <fullyQualifiedTypeName name="org.jfree.chart.JFreeChart"/>
 <fullyQualifiedTypeName name="application.ChartController"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="application.Home"/>
 <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.Pane"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="application.Connect"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
 </qualifiedTypeNameHistroy>
