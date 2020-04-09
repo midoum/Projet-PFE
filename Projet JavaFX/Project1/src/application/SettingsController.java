@@ -49,19 +49,33 @@ protected void Valider(ActionEvent evt) throws IOException{
 				}else if(oldpass.getText().isEmpty()){
 					oldpass.setStyle("-fx-border-color:red");
 					oldpasst.setText("Ce champ est obligatoire");
+					user.setStyle("-fx-border-color:green");
+					usert.setText("");
 				}else if(newpass.getText().isEmpty()){
 					newpass.setStyle("-fx-border-color:red");
 					newpasst.setText("Ce champ est obligatoire");
-				
+					oldpass.setStyle("-fx-border-color:green");
+					oldpasst.setText("");
+			
 					}else if ((user.getText().equals(HomeController.getUser()))!=true){
 						user.setStyle("-fx-border-color:red");
 						usert.setText("Ce n'est pas votre Pseudo");
+						newpass.setStyle("-fx-border-color:green");
+						newpasst.setText("");
+						
 					}else if ((oldpass.getText().equals(HomeController.getPass()))!=true){
 						oldpass.setStyle("-fx-border-color:red");
 						oldpasst.setText("Ce n'est pas votre ancien mot de passe");
+						user.setStyle("-fx-border-color:green");
+						usert.setText("");
+					
+				
 					}else if ((newpass.getText().equals(oldpass.getText()))!=false){
 						newpass.setStyle("-fx-border-color:red");
 						newpasst.setText("Choisissez un nouveau mot de passe");
+						oldpass.setStyle("-fx-border-color:green");
+						oldpasst.setText("");
+				
 					}else{
 						System.out.println("Connected");
 							Statement st=conn.createStatement();

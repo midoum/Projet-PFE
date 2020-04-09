@@ -74,6 +74,9 @@ public class HomeController implements Initializable{
 				user.setStyle("-fx-border-color:red");
 			
 			} else if(pass.getText().isEmpty()){
+				lpseudo.setText("");
+				user.setStyle("-fx-border-color:green");
+			
 				lpass.setText("Remplir votre mot de passe");
 				pass.setStyle("-fx-border-color:red");
 			}
