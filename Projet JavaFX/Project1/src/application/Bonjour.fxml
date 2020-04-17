@@ -16,7 +16,7 @@
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="21.0">
                      <image>
-                        <Image url="@../../application/icons/remove-symbol.png" />
+                        <Image url="@close.png" />
                      </image>
                   </ImageView>
                </graphic>

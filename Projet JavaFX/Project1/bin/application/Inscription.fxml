@@ -10,22 +10,22 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="704.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="760.0" style="-fx-background-color: #EBEDEF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InscriptionController">
    <children>
-      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="705.0" style="-fx-background-color: gray;">
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="763.0" style="-fx-background-color: gray;">
          <children>
-            <Button layoutX="666.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" style="-fx-background-color: transparent;">
+            <Button layoutX="719.0" layoutY="1.0" mnemonicParsing="false" onAction="#Close" style="-fx-background-color: transparent;">
                <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="22.0">
+                  <ImageView fitHeight="18.0" fitWidth="27.0">
                      <image>
-                        <Image url="@../../application/icons/remove-symbol.png" />
+                        <Image url="@close.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
          </children>
       </Pane>
-      <ImageView fitHeight="466.0" fitWidth="757.0" layoutX="-1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="429.0" fitWidth="774.0" layoutX="-1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@3230442.jpg" />
          </image>
@@ -44,7 +44,7 @@
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="34.0">
                <image>
-                  <Image url="@../../application/icons/check-mark.png" />
+                  <Image url="@checked-symbol.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -73,7 +73,7 @@
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="35.0">
                <image>
-                  <Image url="@../../application/icons/circle-with-an-arrow-pointing-to-left.png" />
+                  <Image url="@Back.png" />
                </image>
             </ImageView>
          </graphic>

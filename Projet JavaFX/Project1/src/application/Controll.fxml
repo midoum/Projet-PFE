@@ -36,7 +36,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0" rotate="90.0">
                <image>
-                  <Image url="@icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -76,7 +76,7 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Button fx:id="getData" layoutX="775.0" layoutY="443.0" mnemonicParsing="false" onAction="#GetData" style="-fx-background-color: transparent;">
+      <Button fx:id="getData" layoutX="791.0" layoutY="443.0" mnemonicParsing="false" onAction="#GetData" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="37.0">
                <image>
@@ -88,9 +88,9 @@
       <TextField fx:id="distance" layoutX="112.0" layoutY="233.0" prefHeight="25.0" prefWidth="58.0" />
       <TextField fx:id="temper" layoutX="111.0" layoutY="171.0" prefHeight="25.0" prefWidth="59.0" />
       <TextField fx:id="humi" layoutX="114.0" layoutY="292.0" prefHeight="25.0" prefWidth="58.0" />
-      <Button fx:id="Save" layoutX="706.0" layoutY="444.0" mnemonicParsing="false" onAction="#Enregistrer" style="-fx-background-color: transparent;">
+      <Button fx:id="Save" layoutX="684.0" layoutY="436.0" mnemonicParsing="false" onAction="#Enregistrer" style="-fx-background-color: transparent;">
          <graphic>
-            <ImageView fitHeight="29.0" fitWidth="40.0">
+            <ImageView fitHeight="45.0" fitWidth="58.0">
                <image>
                   <Image url="@save-file-option.png" />
                </image>
@@ -104,7 +104,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0" rotate="90.0">
                <image>
-                  <Image url="@icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic>
@@ -157,7 +157,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0" rotate="-90.0">
                <image>
-                  <Image url="@icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic>
@@ -166,7 +166,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0" rotate="-180.0">
                <image>
-                  <Image url="@icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic>
@@ -175,7 +175,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="26.0">
                <image>
-                  <Image url="@icons/left-arrow.png" />
+                  <Image url="@left-arrow.png" />
                </image>
             </ImageView>
          </graphic>

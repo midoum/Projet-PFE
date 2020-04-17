@@ -25,13 +25,12 @@
          <children>
             <Button layoutX="530.0" layoutY="-4.0" mnemonicParsing="false" onAction="#Close" prefHeight="33.0" prefWidth="1.0" style="-fx-background-color: transparent; -fx-background-radius: 50;">
                <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="18.0">
+                  <ImageView fitHeight="21.0" fitWidth="23.0">
                      <image>
-                        <Image url="@remove-symbol.png" />
+                        <Image url="@close.png" />
                      </image>
                   </ImageView>
-               </graphic>
-            </Button>
+               </graphic></Button>
          </children>
       </Pane>
       <Button fx:id="connect" layoutX="157.0" layoutY="227.0" mnemonicParsing="false" onAction="#ButtonConnect" prefHeight="35.0" prefWidth="194.0" style="-fx-background-color: transparent;" text="Se Connecter" textFill="WHITE">

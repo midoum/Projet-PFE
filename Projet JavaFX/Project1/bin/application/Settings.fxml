@@ -13,7 +13,7 @@
    <children>
       <Pane minHeight="0.0" minWidth="0.0">
          <children>
-            <ImageView fitHeight="600.0" fitWidth="890.0">
+            <ImageView fitHeight="600.0" fitWidth="895.0">
                <image>
                   <Image url="@3230442.jpg" />
                </image>

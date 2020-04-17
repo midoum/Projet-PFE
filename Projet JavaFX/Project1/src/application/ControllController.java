@@ -84,7 +84,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_SCANNER, 0, 0);
 		if(chosenPort.openPort()) {
 			connectButton.setText("Disconnect");
-			connectimg.setImage(new Image("application/cross-mark-on-a-black-circle-background.png"));
+			connectimg.setImage(new Image("application/remove-symbol.png"));
 
 		
 			

@@ -15,12 +15,18 @@
             <Image url="@3230442.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="Oui" layoutX="131.0" layoutY="246.0" mnemonicParsing="false" onAction="#OuiClick" prefHeight="67.0" prefWidth="97.0" text="Oui" />
+      <Button fx:id="Oui" layoutX="171.0" layoutY="246.0" mnemonicParsing="false" onAction="#OuiClick" prefHeight="29.0" prefWidth="38.0">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic></Button>
       <Label layoutX="19.0" layoutY="32.0" prefHeight="178.0" prefWidth="587.0" text="Le Compte N'existe pas voulez vous en créer un?" textFill="WHITE">
          <font>
             <Font name="Arial" size="25.0" />
          </font>
       </Label>
-      <Button fx:id="Non" layoutX="312.0" layoutY="246.0" mnemonicParsing="false" onAction="#NonClick" prefHeight="67.0" prefWidth="97.0" text="Non" />
+      <Button fx:id="Non" layoutX="386.0" layoutY="244.0" mnemonicParsing="false" onAction="#NonClick" prefHeight="50.0" prefWidth="55.0">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic></Button>
    </children>
 </Pane>
