@@ -15,18 +15,24 @@
             <Image url="@3230442.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="Oui" layoutX="171.0" layoutY="246.0" mnemonicParsing="false" onAction="#OuiClick" prefHeight="29.0" prefWidth="38.0">
+      <Button fx:id="Oui" layoutX="171.0" layoutY="246.0" mnemonicParsing="false" onAction="#OuiClick" prefHeight="29.0" prefWidth="38.0" style="-fx-background-color: transparent;">
          <graphic>
-            <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@correct-symbol.png" />
+               </image></ImageView>
          </graphic></Button>
-      <Label layoutX="19.0" layoutY="32.0" prefHeight="178.0" prefWidth="587.0" text="Le Compte N'existe pas voulez vous en créer un?" textFill="WHITE">
+      <Label layoutX="88.0" layoutY="43.0" prefHeight="178.0" prefWidth="379.0" text="Le compte n'existe pas voulez vous en créer un?" textAlignment="CENTER" textFill="#ff3c3c" wrapText="true">
          <font>
             <Font name="Arial" size="25.0" />
          </font>
       </Label>
-      <Button fx:id="Non" layoutX="386.0" layoutY="244.0" mnemonicParsing="false" onAction="#NonClick" prefHeight="50.0" prefWidth="55.0">
+      <Button fx:id="Non" layoutX="386.0" layoutY="244.0" mnemonicParsing="false" onAction="#NonClick" prefHeight="50.0" prefWidth="55.0" style="-fx-background-color: transparent;">
          <graphic>
-            <ImageView fitHeight="46.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="46.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@remove-symbol.png" />
+               </image></ImageView>
          </graphic></Button>
    </children>
 </Pane>

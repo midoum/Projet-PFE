@@ -48,7 +48,7 @@
                <font>
                   <Font size="17.0" />
                </font></Button>
-            <Button fx:id="Settings" mnemonicParsing="false" onAction="#Changersettings" prefHeight="100.0" prefWidth="143.0" style="-fx-background-color: white;" text="Setting" textFill="black">
+            <Button fx:id="Settings" mnemonicParsing="false" onAction="#Changersettings" prefHeight="100.0" prefWidth="178.0" style="-fx-background-color: white;" text="Paramètres" textAlignment="CENTER" textFill="black" textOverrun="WORD_ELLIPSIS" wrapText="true">
                <graphic>
                   <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
