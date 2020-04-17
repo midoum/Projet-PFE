@@ -28,9 +28,9 @@
          <children>
             <Button fx:id="ControllButton" mnemonicParsing="false" onAction="#Controll" prefHeight="100.0" prefWidth="143.0" style="-fx-background-color: white;" text="Contrôl">
                <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="47.0">
+                  <ImageView fitHeight="41.0" fitWidth="56.0">
                      <image>
-                        <Image url="@icons/bug.png" />
+                        <Image url="@Control.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -39,9 +39,9 @@
                </font></Button>
             <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Click" prefHeight="100.0" prefWidth="143.0" style="-fx-background-color: white;" text="Graphes">
                <graphic>
-                  <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="52.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/bar-graph-on-a-rectangle.png" />
+                        <Image url="@bar-graph-on-a-rectangle.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -50,9 +50,9 @@
                </font></Button>
             <Button fx:id="Settings" mnemonicParsing="false" onAction="#Changersettings" prefHeight="100.0" prefWidth="143.0" style="-fx-background-color: white;" text="Setting" textFill="black">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/settings.png" />
+                        <Image url="@settings.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -61,9 +61,9 @@
                </font></Button>
             <Button fx:id="Deco" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="100.0" prefWidth="143.0" style="-fx-background-color: white;" text="Déconnexion" textAlignment="CENTER" wrapText="true">
                <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="39.0">
+                  <ImageView fitHeight="48.0" fitWidth="48.0">
                      <image>
-                        <Image url="@../../application/icons/sign-in.png" />
+                        <Image url="@exitpng.png" />
                      </image>
                   </ImageView>
                </graphic>
