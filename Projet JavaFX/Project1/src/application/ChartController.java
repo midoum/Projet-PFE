@@ -1,7 +1,9 @@
 package application;
 
-import java.net.URL;  
+import java.awt.Color;
+import java.net.URL;   
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 import java.util.ResourceBundle;
@@ -10,8 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingUtilities;
-
-
+import javax.swing.table.DefaultTableModel;
 
 import javafx.embed.swing.SwingNode;
 import javafx.event.ActionEvent;
@@ -19,7 +20,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
-import net.proteanit.sql.DbUtils;
+
 
 
 
@@ -70,9 +71,38 @@ public class ChartController  implements Initializable{
 	    	    	new Connect().connect(req);
 	    	    	  
 	    	    	   ResultSet rs=new Connect().getRs();
-	    	    	    JTable jt=new JTable();    
-	    	    	    jt.setModel(DbUtils.resultSetToTableModel(rs));
-	    	    	    jt.setBounds(30,40,200,300);          
+	    	    	   
+	    	    		  DefaultTableModel dtm = new DefaultTableModel();
+
+	    	    		   new Connect().connect(req);
+	    	    		   rs=new Connect().getRs();
+	    	    	try {
+	    	    		ResultSetMetaData mt=rs.getMetaData();
+	    	    		int count=mt.getColumnCount();
+	    	    		 for (int columnIndex = 1; columnIndex <= count; columnIndex++){
+	    	    	         dtm.addColumn(mt.getColumnName(columnIndex));
+	    	    	         }
+	    	    	while(rs.next()) {
+	    	    		Object []data=new Object[count];
+	    	    		for(int i=0;i<count;i++) {
+	    	    			
+	    	    			data[i]=rs.getObject(i+1);
+	    	    		
+	    	    			
+	    	    	     }
+	    	    		dtm.addRow(data);
+	    	    		}
+	    	    		}catch(Exception e) {
+	    	    			
+	    	    		}
+	    	    		
+	    	    		
+	    	    	    JTable jt=new JTable(); 
+	    	    	    
+	    	    	    jt.setModel(dtm);
+	    	      
+	    	            jt.setRowHeight(50);
+	    	            
 	    	    	    JScrollPane sp=new JScrollPane(jt); 
 	    	    	
 	    	    	    swingNode.setContent(sp);

@@ -24,7 +24,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Pane fx:id="p" prefHeight="595.0" prefWidth="591.0" />
+      <Pane fx:id="p" prefHeight="600.0" prefWidth="600.0" />
       <Button layoutX="623.0" layoutY="230.0" mnemonicParsing="false" onAction="#MontrerTable" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="36.0" fitWidth="37.0">
