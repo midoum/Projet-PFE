@@ -143,7 +143,7 @@ protected void  RobotControll(ActionEvent e5) throws IOException{
 		Date Date=new Date();
 		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
 		String Date1=format.format(Date);
- String req="insert into temp (date,luminosite,temperature,humidite,distance)values('"+Date1+"','"+lum+"','"+tem+"','"+hum+"','"+dis+"')";
+ String req="insert into temp (date,luminosite,temperature,humidite,distance,user)values('"+Date1+"','"+lum+"','"+tem+"','"+hum+"','"+dis+"','"+new HomeController().getUser()+"')";
 new Connect().update(req);	
 	}
 @FXML

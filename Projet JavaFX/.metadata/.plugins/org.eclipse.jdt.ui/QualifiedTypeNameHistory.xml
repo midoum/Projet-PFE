@@ -22,7 +22,6 @@
 <fullyQualifiedTypeName name="javafx.scene.control.ProgressBar"/>
 <fullyQualifiedTypeName name="application.LineChart_AWT"/>
 <fullyQualifiedTypeName name="javax.swing.WindowConstants"/>
-<fullyQualifiedTypeName name="application.HomeController"/>
 <fullyQualifiedTypeName name="org.jfree.data.xy.XYSeries"/>
 <fullyQualifiedTypeName name="org.jfree.data.xy.XYSeriesCollection"/>
 <fullyQualifiedTypeName name="org.jfree.data.xy.XYDataset"/>
@@ -49,7 +48,6 @@
 <fullyQualifiedTypeName name="LineChartConstruct"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
-<fullyQualifiedTypeName name="application.Home"/>
 <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.Pane"/>
 <fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
 <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="application.Home"/>
+<fullyQualifiedTypeName name="application.HomeController"/>
 </qualifiedTypeNameHistroy>

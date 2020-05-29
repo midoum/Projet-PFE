@@ -67,7 +67,7 @@ public class ChartController  implements Initializable{
 	            @Override
 	            public void run() {
 	             	
-	    	    	String req="select date,luminosite,temperature,humidite,distance from temp";
+	    	    	String req="select date,luminosite,temperature,humidite,distance from temp where user='"+new HomeController().getUser()+"'";
 	    	    	new Connect().connect(req);
 	    	    	  
 	    	    	   ResultSet rs=new Connect().getRs();
