@@ -113,7 +113,7 @@ public class ChartController  implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		
-		String req="select distinct date from temp";
+		String req="select distinct date from temp where user ='"+new HomeController().getUser()+"'";
 		
 		new Connect().connect(req);
 		 rs =new Connect().getRs();
