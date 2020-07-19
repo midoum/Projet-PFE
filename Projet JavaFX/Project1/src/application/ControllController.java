@@ -76,6 +76,7 @@ int hum;
 
 @FXML
 protected void  RobotControll(ActionEvent e5) throws IOException{
+	
 
 	System.out.println(portList.getSelectionModel().getSelectedItem());
 	if(connectButton.getText().equals("Connect")) {
@@ -174,6 +175,7 @@ protected void ServoUp(ActionEvent e33) throws IOException{
 		public void run() {Envoyer("4");
 	}};
 	c.start();
+	
 }
 @FXML
 protected void ServoDown(ActionEvent e36) throws IOException{
@@ -213,12 +215,18 @@ protected void  Stream(ActionEvent e10) throws IOException, URISyntaxException{
 
 }
 @Override
+
 public void initialize(URL arg0, ResourceBundle arg1) {
+	portList.getItems().clear();
 	SerialPort[] portNames = SerialPort.getCommPorts();
-	for(int i = 0; i < portNames.length; i++)
+	
+	for(int i = 0; i < portNames.length; i++) {
+		
+		
 		portList.getItems().add(portNames[i].getSystemPortName());
 	
 System.out.println(portList.getItems().toString());
+}
 
 	
 }
